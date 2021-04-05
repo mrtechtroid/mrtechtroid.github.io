@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Mr Techtroid</title>
+	<link href="stylesheet.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+<div class="icon-bar">
+  <a href="https://github.com/mrtechtroid" class="icon1" title = "Github Profile"><i class="fa fa-github"></i></a> 
+  <a href="https://mrtechtroid.blogspot.com" class="icon2" title = "Blog"><i class="fa fa-google" ></i></a> 
+  <a href="https://mrtechtroid.github.io" class="icon3" title = "Home">MT</a> 
+  <a href="contactus.html" class="icon4" title = "Contact Us">📞</a>
+</div>
+<div class= "underdev">
+	<!-- Addition Code For Old Versions. #ADC-V1-A05 (Modification Of Button Title) -->
+	<h4><a href = "#popupunderdev">New Version Available</a></h4>
+	<!-- <h4><a href = "#popupunderdev">Site Under Development</a></h4> -->
+	<!-- #ADC-V1-A05 Ends Here  -->
+</div>
+<!-- Addition Code For Old Versions. #ADC-V1-A01 -->
+<div id = "overlay" style = "position: fixed; display: block; width: 100%;height: 100%;top: 0;left: 0;right: 0;bottom: 0;background-color: rgba(0,0,0,0.5);z-index: 2;cursor: pointer;" onclick = "document.getElementById('overlay').style.display = 'none';"> 
+	<h1 style = "font-family: Consolas;color:white;top: 50%;left: 50%;position: absolute;transform: translate(-50%,-50%);-ms-transform: translate(-50%,-50%);">OLD Version</h1>
+	<h1 style = "font-family: Consolas;color:white;top: 60%;left: 50%;position: absolute;transform: translate(-50%,-50%);-ms-transform: translate(-50%,-50%);">Click Me To Continue</h1>
+	<button style = "color: cyan; font-size: 20px; font-family: Consolas; background-color: tomato;" onclick = "window.location = ('/v2/index.html');">New Site</button>
+</div>
+<!-- #ADC-V1-A01 Ends Here  -->
+<!-- Addition Code For Old Versions. #ADC-V1-A03 (Removal Of Unnexxessary Popups) -->
+<!-- <div id="popupunderdev" class="overlay">
+		<div class="popup">
+			<h2><center>Site Under Development</center></h2>
+			<a class="close" href="#projects">&times;</a>
+			<div class="content">
+				<p>Hello User, The Site is currently under Development, So many links, content might not work properly and will be Fixed Soon. Stay Tuned. </p>
+			</div>
+		</div>
+	</div> -->
+<!-- #ADC-V1-A03 Ends Here  -->
+<!-- Addition Code For Old Versions. #ADC-V1-A04 -->
+<div id="popupunderdev" class="overlay">
+		<div class="popup">
+			<h2><center>New Version Available</center></h2>
+			<a class="close" href="#projects">&times;</a>
+			<div class="content">
+				<p>Hello User, This Site is a Old Version Of The Website. Please Visit The New Website</p><a href = "/v2/index.html">Here</a>
+			</div>
+		</div>
+</div>
+<!-- #ADC-V1-A04 Ends Here  -->
+<header id = "home">
+	<div class="topnav">
+		<a href="#crsec5">About Me</a>
+		<a href="#crsec4">Beginner's guide</a>
+		<a href="#crsec3">Simulations</a>
+		<a href="#crsec2">Projects</a>
+		<a href="#crsec1">Web Apps</a>
+		<a href="#shortnote">Short Note</a>
+		<a class="active" href="#home">Home</a>
+	</div>
+	<div>
+		<div>
+	      <h1 style = "color:black"><b>Mr Techtroid</b></h1>
+	      <h3 style = "color:grey">"A Few Lines of Code Helps Everyone Acheive their Dreams"</h3>
+	      <h5><a href = "https://mrtechtroid.github.io" id = "sp_button">mrtechtroid.github.io</a></h5>
+	      <strong style = "font-size: 20px">📍 Bengalore, India</strong>
+	  </div>
+	  
+	</div>
+</header>
+<br>
+<section id = "shortnote">
+	<p style = "color:orange;font-family:verdana;font-size:200%;text-align:center;">A Short Note</p>
+	<article style = "color:red;font-family:verdana;font-size: 120%;padding-left: 5%"><b>
+		Welcoming All Users to my Website. I Hope That my Projects And Pages Will Help you all in some way..<br><br>
+		By Making This Website, I want to help fellow Developers, Teachers, Educational Institutions and everyone else by providing various simulations of various different topics of Math, Sciences and also develop some great apps, softwares and tools which might be used for a variety of purposes..  <br><br>
+		Only Some of my simulations are licensed under MIT License and can be used for both private and commercial purposes but I would like to request that if you could attribute us anywhere in the code, presentation, or anywhere else. For detailed License click <a href = "https://github.com/mrtechtroid/mrtechtroid.github.io/blob/master/LICENSE">here</a>. Other Simulations are not Licensed and are copyrighted.<br><br> 
+		If you want to contribute to my Website or Projects Visit Us at our Github Page <a href = "https://github.com/mrtechtroid" >here</a>.<br><br>
+		<center>Thanks For Visiting.....</center>
+	</b>
+	</article>
+</section>
+<br><br>
+<section id = "crsec1" class = "main_section">
+	<h2><b>Minor Web Apps</b></h2>
+	<p>Here are some of the Awesome Features of our Website</p>
+	<table  cellspacing="3" cellpadding="10" class = "table" id = "c1_table" >
+		<tbody>
+		<tr>
+			<th>Sr.No</th>
+			<th>Page Name</th>
+			<th>Link</th>
+			<th>About</th>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>Techy Calc V1</td>
+			<!-- Addition Code For Old Versions. #ADC-V1-A06 (Removal Of Links And TechyCalc Online With A Error Alert) -->
+			<!-- <td><a href="apps/techycalc.html" id = "tb_button">Click Here</a></td> -->
+			<td><a href = "#removed" onclick="alert('Link Removed');" id = "tb_button">Click Here</a></td>
+			<!-- Addition Code For Old Versions. #ADC-V1-A06 -->
+			<td>A Very Complex Calculator</td>
+		</tr>
+		<tr>
+			<td>2</td>
+			<td>Clock</td>
+			<td><a href="apps/clock.html" id = "tb_button">Click Here</a></td>
+			<td>A Analog and Digital Clock</td>
+		</tr>
+	</tbody></table>
+	
+</section>
+<br><br>
+<section id = "crsec2" class = "main_section">
+	<h2><b>Projects</b></h2>
+	<p>Below Are all My Projects Which Have Been Completed</p>
+	<table  cellspacing="3" cellpadding="10" class = "table"id = "c2_table">
+		<tbody>
+		<tr>
+			<th>Sr.No</th>
+			<th>Project Name</th>
+			<th>About</th>
+			<th>Project Repository</th>
+			<th>Download Link</th>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>Public</td>
+			<td><a href="#popup1" id = "tb_button" >Click Here</a></td>
+			<td><a href="https://github.com/mrtechtroid/public" id = "tb_button">Click Me</a></td>
+			<td><a href="https://github.com/mrtechtroid/public/archive/master.zip" id = "tb_button">Download As ZIP</a></td>
+		</tr>
+		<tr>
+			<td>2</td>
+			<td>Techy Calc</td>
+			<td><a href="#popup2" id = "tb_button">Click Here</a></td>
+			<td><a href="https://github.com/mrtechtroid/techycalc" id = "tb_button">Click Me</a></td>
+			<td><a href="https://github.com/mrtechtroid/techycalc/archive/master.zip" id = "tb_button">Download As ZIP</a></td>
+		</tr>
+		<tr>
+			<td>3</td>
+			<td>Visual Basic</td>
+			<td><a href="#popup3" id = "tb_button">Click Here</a></td>
+			<td><a href="https://github.com/mrtechtroid/visualbasic" id = "tb_button">Click Me</a></td>
+			<td><a href="https://github.com/mrtechtroid/visualbasic/archive/master.zip" id = "tb_button">Download As ZIP</a></td>
+		</tr>
+		<tr>
+			<td>4</td>
+			<td>Python</td>
+			<td><a href="#popup4" id = "tb_button">Click Here</a></td>
+			<td><a href="https://github.com/mrtechtroid/python" id = "tb_button">Click Me</a></td>
+			<td><a href="https://github.com/mrtechtroid/python/archive/master.zip" id = "tb_button">Download As ZIP</a></td>
+		</tr>
+	</tbody></table>
+	<div id="popup1" class="overlay">
+		<div class="popup">
+			<h2>Public</h2>
+			<a class="close" href="#projects">&times;</a>
+			<div class="content">
+				It is a set of basic useful set of files which might be required by Developers..
+			</div>
+		</div>
+	</div>
+	<div id="popup2" class="overlay">
+		<div class="popup">
+			<h2>Techy Calc</h2>
+			<a class="close" href="#projects">&times;</a>
+			<div class="content">
+				The First Project by Us It is a fully-packed Calculator which can solve almost everything from Maths In High School Level
+			</div>
+		</div>
+	</div>
+	<div id="popup3" class="overlay">
+		<div class="popup">
+			<h2>Visual Basic</h2>
+			<a class="close" href="#projects">&times;</a>
+			<div class="content">
+				Visual Basic is an easy to program, programming language which can be used for coding basic apps easily for New Developers. Mostly popular before 2012-13, this is just a kind of archive of all the projects. 
+			</div>
+		</div>
+	</div>
+	<div id="popup4" class="overlay">
+		<div class="popup">
+			<h2>Python</h2>
+			<a class="close" href="#projects">&times;</a>
+			<div class="content">
+				These are some of the Python Scripts which are very good and may be used by fellow developers for various purposes.
+			</div>
+		</div>
+	</div>
+</section>
+<br><br>
+ <section id ="crsec3" class = "main_section"> 
+ 	<h2><b>Simulations</b></h2>
+	<p>Below is the List of All Things You Might Wanna See...</p>
+ </section>
+ <br><br>
+  <section  id = "crsec4" class = "main_section">
+ 	<h2><b>Beginner's Guide</b></h2>
+	<p>Small and Consise Writeup's to help new developers.</p>
+	<table  cellspacing="3" cellpadding="10" class = "table" id = "c4_table" >
+		<tbody>
+		<tr>
+			<th>Sr.No</th>
+			<th>Name</th>
+			<th>Category</th>
+			<th>Link</th>
+			<th>About</th>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>Command Prompt</td>
+			<td>Basics</td>
+			<td><a href="bguide/cmd.html" id = "tb_button">Click Here</a></td>
+			<td>The Basics Of Computers</td>
+		</tr>
+		<!-- Addition Code For Old Versions. #ADC-V1-A02 (Removal Of Unused Links) -->
+		<!-- <tr>
+			<td>2</td>
+			<td>CSS</td>
+			<td>Web Development</td>
+			<td><a href="bguide/css.html" id = "tb_button">Click Here</a></td>
+			<td>UNDER DEVELOPMENT</td>
+		</tr>
+		<tr>
+			<td>3</td>
+			<td>Javascript</td>
+			<td>Web Development</td>
+			<td><a href="bguide/js.html" id = "tb_button">Click Here</a></td>
+			<td>UNDER DEVELOPMENT</td>
+		</tr>
+		<tr>
+			<td>4</td>
+			<td>Python</td>
+			<td>Programming</td>
+			<td><a href="bguide/py.html" id = "tb_button">Click Here</a></td>
+			<td>UNDER DEVELOPMENT</td>
+		</tr>
+		<tr>
+			<td>5</td>
+			<td>Visual Basic</td>
+			<td>Programming</td>
+			<td><a href="bguide/vb.html" id = "tb_button">Click Here</a></td>
+			<td>UNDER DEVELOPMENT</td>
+		</tr>
+		<tr>
+			<td>6</td>
+			<td>Java</td>
+			<td>Programming</td>
+			<td><a href="bguide/java.html" id = "tb_button">Click Here</a></td>
+			<td>UNDER DEVELOPMENT</td>
+		</tr>
+		<tr>
+			<td>7</td>
+			<td>C</td>
+			<td>Programming</td>
+			<td><a href="bguide/c.html" id = "tb_button">Click Here</a></td>
+			<td>UNDER DEVELOPMENT</td>
+		</tr>
+		<tr>
+			<td>8</td>
+			<td>C++</td>
+			<td>Programming</td>
+			<td><a href="bguide/cplus.html" id = "tb_button">Click Here</a></td>
+			<td>UNDER DEVELOPMENT</td>
+		</tr>
+		<tr>
+			<td>9</td>
+			<td>HTML</td>
+			<td>Web Development</td>
+			<td><a href="bguide/html.html" id = "tb_button">Click Here</a></td>
+			<td>UNDER DEVELOPMENT</td>
+		</tr>
+		<tr>
+			<td>10</td>
+			<td>Terminal</td>
+			<td>Basics</td>
+			<td><a href="bguide/ter.html" id = "tb_button">Click Here</a></td>
+			<td>UNDER DEVELOPMENT</td>
+		</tr> -->
+		<!-- #ADC-V1-A02 Ends Here  -->
+	</tbody></table>
+ </section>
+ <br><br>
+  <section id ="crsec5" class = "main_section"> 
+ 	<h2><b><center>About Me</center></b></h2>
+	<img src = "https://avatars1.githubusercontent.com/u/64828294?s=460&v=4" style = "float: right;border-radius: 50%;width:250px;height:250px;padding-right: 5%" title = "EasterEgg{w33l_i_@m_th3_f1rst_one}"><br>
+	<article style = "padding-left: 5%">
+		1. I am Mr Techtroid from Bangalore,India 🇮🇳<br>
+		2. Joined to Github on May 5th 2020 🎂<br>
+		3. I like Programming And Coding 👍❤️<br>
+		4. I am Fluent with Python, HTML-CSS, and Visual Basic 🎓<br>
+		5. I’m currently learning More of The Above Languages 🌱<br>
+	</article>
+ </section>
+ <br><br>
+<footer>
+	<p>Last Updated On 3rd September 2020(IST)</p>
+	<p>Site Version 1.0</p>
+	<span id="date_time" style = "color: red">
+        <script type="text/javascript">
+			document.write ('<span id="date">', new Date().toLocaleString(), ' </span>')
+			if (document.getElementById) onload = function ()
+			{
+    			setInterval ("document.getElementById ('date').firstChild.data = new Date().toLocaleString()", 50)
+    	}
+		</script>
+   </span>
+</footer>
+</body>
+</html>

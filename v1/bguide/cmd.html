@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>BGUIDE - CMD By Mrtechtroid</title>
+	<link href="../stylesheet.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="HandheldFriendly" content="true">
+</head>
+<body>
+<div class="icon-bar">
+  <a href="https://github.com/mrtechtroid" class="icon1"><i class="fa fa-github"></i></a> 
+  <a href="https://mrtechtroid.blogspot.com" class="icon2"><i class="fa fa-google" ></i></a> 
+  <a href="https://mrtechtroid.github.io" class="icon3">MT</a> 
+  <a href="../contactus.html" class="icon4">📞</a>
+</div>
+<header id = "home">
+	<h1 style = "color:black"><b>Command Line - Windows</b></h1>
+	<h5><a href = "https://mrtechtroid.github.io" id = "sp_button">mrtechtroid.github.io</a></h5>
+	<h5><a href = "https://mrtechtroid.github.io/bguide/ter.html" id = "sp_button">Terminal(MacOS and Linux)</a></h5>
+</header>
+<br><br>
+<section class = "main_section" id = "crsec1">
+	<h1>Basics</h1>
+	<br><hr><br>
+	<h3>1. prompt (string)</h3>
+	<article>
+		This command will allow us to change the default string of path to string.<br>
+		Like if you type the command <span style = "color: cyan">prompt Admin:</span> the command prompt will display as follows:
+		<div class = "cmdparent">
+			<section class = "commandprompt">
+				<p>C:\Users\Administrator> prompt admin$G</p>
+				<p>admin></p>
+				<p>admin></p>
+			</section>
+		</div>
+		Now you might be wondering what <span style = "color: cyan">$G</span> stands for. Basically <span style = "color: cyan">$G</span> stands for > symbol. There are a list of special codes for certain symbols and their values which are as follows:
+	</article>
+	<table style = "text-align: center; border-color: chocolate;">
+		<tr>
+			<th>Special Code</th>
+			<th>Symbol</th>
+			<th>Special Code</th>
+			<th>Symbol</th>
+		</tr>
+		<tr>
+			<td>$A</td>   
+			<td>& (Ampersand)</td>
+			<td>$B</td>  
+			<td>| (pipe)</td>
+			
+		</tr>
+		<tr>
+			<td>$C</td>   
+			<td>( (Left parenthesis)</td>
+			<td>$D</td>   
+			<td>Current date</td>
+			
+		</tr>
+		<tr>
+			<td>$F</td>   
+			<td>) (Right parenthesis)</td>
+			<td>$G</td>   
+			<td>> (greater-than sign)</td>
+			
+		</tr>
+		<tr>
+			<td>$L</td>   
+			<td>< (less-than sign)</td>
+			<td>$N</td>   
+			<td>Current drive</td>
+			
+		</tr>
+		<tr>
+			<td>$Q</td>   
+			<td>= (equal sign)</td>
+			<td>$S</td>   
+			<td>  (space)</td>
+			
+		</tr>
+		<tr>
+			<td>$V</td>   
+			<td>Windows version number</td>
+			<td>$_</td>   
+			<td>Carriage return and linefeed</td>
+		</tr>
+		<tr>
+			<td>$T</td>   
+			<td>Current time</td>
+			<td>$P</td>   
+			<td>Current drive and path</td>
+		</tr>
+		<tr>
+			<td>$H</td>   
+			<td>Backspace (erases previous character)</td>
+			<td>$E</td>   
+			<td>Escape code (ASCII code 27)</td>
+		</tr>
+		<tr>
+			<td>$$</td>   
+			<td>$ (dollar sign)</td>
+		</tr>
+	</table>
+	<br><hr><br>
+	<!----------------------------------------------------------------------------------------------------------->
+	<h3>2. title (string)</h3>
+	<article>
+		This command will allow us to change the default title of the command prompt to whatever you want.<br>
+		Like if you type the command <span style = "color: cyan">title Hello User</span> the command prompt will like make the title say Hello User
+		<div class = "cmdparent">
+			<section class = "commandprompt">
+				<p>C:\Users\Administrator> title hello User</p>
+			</section>
+		</div>
+	</article>
+	<br><hr><br>
+	<!----------------------------------------------------------------------------------------------------------->
+	<h3>3. /?  and help</h3>
+	<article>
+		Adding the suffix <span style = "color: cyan">/?</span> behind  any command will bring up the help section for that particular command. <br>
+		Adding the prefix <span style = "color: cyan">help</span> in front of any command will also bring up the help section for that command.
+	</article>
+	<div class = "cmdparent">
+		<section class = "commandprompt">
+			<p>C:\Users\Administrator> prompt /?</p>
+			<article>
+				Changes the cmd.exe command prompt.<br><br>
+				PROMPT [text]<br>
+				......
+			</article>
+			<p>C:\Users\Administrator> help prompt</p>
+			<article>
+				Changes the cmd.exe command prompt.<br><br>
+				PROMPT [text]<br>
+				......
+			</article>
+		</section>
+	</div>
+	<br><hr><br>
+	<!----------------------------------------------------------------------------------------------------------->
+	<h3>4. tree</h3>
+	<article>
+		This will relay a tree like structure of folders and files in that folder. If we add anything.txt in front then we can save the output in a file. 
+	</article>
+	<div class = "cmdparent">
+		<section class = "commandprompt">
+			<p>C:\Users\Administrator> tree </p>
+		</section>
+	</div>
+	<br><hr><br>
+	<!----------------------------------------------------------------------------------------------------------->
+	<h3>5. cls</h3>
+	<article>
+		This will relay a tree like structure of folders and files in that folder. If we add anything.txt in front then we can save the output in a file. 
+		<div class = "cmdparent">
+			<section class = "commandprompt">
+				<p>C:\Users\Administrator> prompt hacker$G </p>
+				<p>hacker> echo Hi<br><br>Hi<br>hacker> echo Hello <br><br>Hello<br>hacker> echo This Looks Messy <br><br> This Looks Messy</p>
+				<p>hacker> cls</p>
+			</section>
+		</div>
+		<br>
+		Now After Entering The Command You Will Get a clean window like this. <br><br>
+		<div class = "cmdparent">
+			<section class = "commandprompt">
+				<p>C:\Users\Administrator> </p>
+			</section>
+		</div>
+	</article>
+	<br><hr><br>
+	<!----------------------------------------------------------------------------------------------------------->
+	<h3>6. shutdown</h3>
+	<article>
+		This command will shut down the computer. If you want to shutdown the computer after a while then you may use the command <span style = "color: cyan">shutdown -s -t X</span> where X refers to the number of seconds.
+		<span style = "color: red">Well Dont try it now because the computer will shut down!!!</span> 
+	</article>
+	<div class = "cmdparent">
+		<section class = "commandprompt">
+			<p>C:\Users\Administrator> shutdown </p>
+		</section>
+	</div>
+	<br><hr><br>
+	<!----------------------------------------------------------------------------------------------------------->
+	<h3>7. &&</h3>
+	<article>
+		This will allow us to run two or more commands at the same time.<br> 
+		For eg. <span style = "color: cyan">ping google.com && ipconfig</span>  will run the ping command and then ipconfig
+	</article>
+	<div class = "cmdparent">
+		<section class = "commandprompt">
+			<p>C:\Users\Administrator> ping google.com && ipconfig </p>
+			<p>C:\Users\Administrator> echo We will be discussing Both These Commands Shortly</p>
+		</section>
+	</div>
+	<br><hr><br>
+	<!----------------------------------------------------------------------------------------------------------->
+	<h3>8. Ctrl + C</h3>
+	<article>
+		This Hotkey will abort any command running in CMD. Like you have turned on the <span style = "color: cyan">tree</span> command then this might save you and will terminate the program in between.
+	</article>
+	<br><hr><br>
+	<!----------------------------------------------------------------------------------------------------------->
+	<h3>9. color </h3>
+	<article>
+		This will allow us to change the colour of the CMD. You can use "help color" to find all the list of colours available. Normally cmd runs in white color you can now make it run on lets say green color. 
+		<div class = "cmdparent">
+			<section class = "commandprompt" style = "color: green">
+				<p>C:\Users\Administrator> color 2 </p>
+				<p>C:\Users\Administrator></p>
+			</section>
+		</div>
+		Now Lets Discuss the various Colour Codes.. <br>
+		0 = Black   |    8 = Gray<br>
+		1 = Blue    |    9 = Light Blue<br>
+		2 = Green   |    A = Light Green<br>
+		3 = Aqua    |    B = Light Aqua<br>
+		4 = Red     |    C = Light Red<br>
+		5 = Purple  |    D = Light Purple<br>
+		6 = Yellow  |    E = Light Yellow<br>
+		7 = White   |    F = Bright White<br>
+	</article>
+	<br><hr><br>
+	<!----------------------------------------------------------------------------------------------------------->
+	<h3>10. |clip</h3>
+	<article>
+		 You saw that Ctrl+C in Cmd is used for Stopping a command. So what to do if you would like to copy all the result which you get in your clipword. We will use the <span style = "color: cyan">|clip</span> command. This prefix will send the output of some command to the clipboard directly  
+	</article>
+	<div class = "cmdparent">
+		<section class = "commandprompt">
+			<p>C:\Users\Administrator> tree |clip </p>
+		</section>
+	</div>
+	<br><hr><br>
+	<!----------------------------------------------------------------------------------------------------------->
+	<h3>11. set /a NO1+NO2</h3>
+	<article>
+		You Can Use The Command <span style = "color: cyan">set /a</span> for calculating basic arithmetic. Instead of ? add any variable like a,b,c,d,.... Note here that for division it gave result as 0 instead of 0.5. This is because it just gives the integer value. 
+	</article>
+	<div class = "cmdparent">
+		<section class = "commandprompt">
+			<p>C:\Users\Administrator> set /a 2+4 <br> 6 </p>
+			<p>C:\Users\Administrator> set /a 2-4 <br> -2 </p>
+			<p>C:\Users\Administrator> set /a 2*4 <br> 8 </p>
+			<p>C:\Users\Administrator> set /a 2/4 <br> 0 </p>
+		</section>
+	</div>
+	<br><hr><br>
+	<!----------------------------------------------------------------------------------------------------------->
+</section>
+<br><br>
+<section class = "main_section" id = "crsec2">
+	<h1>Intermediate</h1>
+	<br><hr><br>
+	<h3>1. cd</h3>
+	<article>
+		Now You Might be wondering how to change the folders in cmd. Well here you go. So firstly if you want to move a folder Forward then type <span style = "color: black">cd FOLDERNAME</span>. If you want to go back one folder type <span style = "color: black">cd..</span>. If you want to go to a different drive then type <span style = "color: black">DRIVELETTER:</span>If the folder name has a blank/space in between then write the path in double inverted commas.
+	</article>
+	<div class = "cmdparent">
+		<section class = "commandprompt">
+			<p>C:\Users\Administrator> cd Documents </p>
+			<p>C:\Users\Administrator\Documents> cd..</p>
+			<p>C:\Users\Administrator> F:</p>
+			<p>F:>cd "I love CMD"</p>
+			<p>F:\I love CMD></p>
+		</section>
+	</div>
+	<br><hr><br>
+	<!----------------------------------------------------------------------------------------------------------->
+	<h3>2. dir</h3>
+	<article>
+		It will List all the Files and Subfolders/Sub-Directories in a Folder/Directory
+	</article>
+	<div class = "cmdparent">
+		<section class = "commandprompt">
+			<p>C:\Users\Administrator> dir </p>
+			<p> Volume in drive C is Windows<br>Volume Serial Number is XXXX-XXXX<br>Directory of C:\Users\Administrator</p>
+			<p>01-01-2020  12:00    DIR          .<br>01-01-2020  12:00    DIR         ..</p>
+			<p>........</p>
+		</section>
+	</div>
+	<br><hr><br>
+	<!----------------------------------------------------------------------------------------------------------->
+	<h3>3. echo </h3>
+	<article>
+		Using this command you can make certain text to be displayed on the Command Prompt. 
+	</article>
+	<div class = "cmdparent">
+		<section class = "commandprompt">
+			<p>C:\Users\Administrator> echo Hello World<br>Hello World </p>
+		</section>
+	</div>
+	<br><hr><br>
+	<!----------------------------------------------------------------------------------------------------------->
+	<h3>4. exit	</h3>
+	<article>
+		This Command Will Close The Command Prompt or The Batch File(We will talk about it in detail later...). 
+	</article>
+	<div class = "cmdparent">
+		<section class = "commandprompt">
+			<p>C:\Users\Administrator> exit</p>
+		</section>
+	</div>
+	<br><hr><br>
+	<!----------------------------------------------------------------------------------------------------------->
+	<h3>5. time and date </h3>
+	<article>
+		The command <span style = "color: black">time</span>  will display the current system time in CMD. It might ask you to set a new time if you just press enter no changes will be made to the time.<br>
+		The command <span style = "color: black">date</span> will display the current system date in CMD. It might ask you to set a new date if you just press enter no changes will be made to the date.
+	</article>
+	<div class = "cmdparent">
+		<section class = "commandprompt">
+			<p>C:\Users\Administrator> time </p>
+			<p>The current date is: 12:12:30.30</p>
+			<p>Enter the new time: </p>
+			<p>C:\Users\Administrator> date </p>
+			<p>The current date is: 01-01-2020</p>
+			<p>Enter the new date: (dd-mm-yy) </p>
+		</section>
+	</div>
+	<br><hr><br>
+	<!----------------------------------------------------------------------------------------------------------->
+	<h3>6. ver </h3>
+	<article>
+		It will Display The Version No. of the OS which you are using currently... 
+	</article>
+	<div class = "cmdparent">
+		<section class = "commandprompt">
+			<p>C:\Users\Administrator> ver <br>Microsoft Windows [Version 10.0.18363.959]</p>
+		</section>
+	</div>
+	<br><hr><br>
+	<!----------------------------------------------------------------------------------------------------------->
+	<h3>7. getmac</h3>
+	<article>
+		It will display the mac address of the Computer you are using Currently... 
+	</article>
+	<div class = "cmdparent">
+		<section class = "commandprompt">
+			<p>C:\Users\Administrator> getmac </p>
+			<p>Physical Address    Transport Name<br>.....</p>
+		</section>
+	</div>
+	<br><hr><br>
+	<!----------------------------------------------------------------------------------------------------------->
+	<h3>8. copy / xcopy	</h3>
+	<article>
+		It will allow you to copy files from one place to another. It also allows changing the file type of the file you are copying. The syntax is as follows: <span style = "color: black">copy FILE NEW FILE</span>. 
+	</article>
+	<div class = "cmdparent">
+		<section class = "commandprompt">
+			<p>C:\Users\Administrator>copy example.jpg example.png</p>
+		</section>
+	</div>
+	<br><hr><br>
+	<!----------------------------------------------------------------------------------------------------------->
+	<h3>9. rename </h3>
+	<article>
+		It allows you to rename files in cmd.
+	</article>
+	<div class = "cmdparent">
+		<section class = "commandprompt">
+			<p>C:\Users\Administrator>rename example.txt 122.txt</p>
+		</section>
+	</div>
+	<br><hr><br>
+	<!----------------------------------------------------------------------------------------------------------->
+	<h3>10. replace	</h3>
+	<article>
+		It replaces file in cmd.  
+	</article>
+	<div class = "cmdparent">
+		<section class = "commandprompt">
+			<p>C:\Users\Administrator>replace "C:\*.exe" C:\source</p>
+		</section>
+	</div>
+	<br><hr><br>
+	<!----------------------------------------------------------------------------------------------------------->
+	<h3>11. erase / del	delete one or more files</h3>
+	<article>
+		It can delete one or more files in cmd.  
+	</article>
+	<div class = "cmdparent">
+		<section class = "commandprompt">
+			<p>C:\Users\Administrator>del apps.txt</p>
+		</section>
+	</div>
+	<br><hr><br>
+	<!----------------------------------------------------------------------------------------------------------->
+	<h3>12. rmdir / rd	delete directory</h3>
+	<article>
+		This will relay a tree like structure of folders and files in that folder. If we add anything.txt in front then we can save the output in a file. 
+	</article>
+	<div class = "cmdparent">
+		<section class = "commandprompt">
+			<p>C:\Users\Administrator>rd Apps </p>
+		</section>
+	</div>
+	<br><hr><br>
+	<!----------------------------------------------------------------------------------------------------------->
+</section>
+<br><br>
+<section class = "main_section" id = "crsec3">
+	<h1>More Commands</h1><hr>
+	<h3>1. netsh wlan show profile WiFi-name key=clear</h3>
+	<article>
+		It Lists out the password of the wifi you want to know the name of. Just replace the WiFi-name to your wifi name. 
+	</article>
+	<div class = "cmdparent">
+		<section class = "commandprompt">
+			<p>C:\Users\Administrator>netsh wlan show profile test key=clear </p>
+		</section>
+	</div>
+	<br><hr><br>
+	<h3>2. net user (USER) *</h3>
+	<article>
+		This command will allow to change the password of Windows if we get the computer on bychance and we can even change it. Please Note: that the command prompt needs to be running with Administrator privileges.This can be used in RECOVERY MODE of Windows by using cmd there as the command prompt starts up with Root Administrator Privaliges
+	</article>
+	<div class = "cmdparent">
+		<section class = "commandprompt">
+			<p>C:\Users\Administrator>net user Administrator 123123 </p>
+		</section>
+	</div>
+	<br><hr><br>
+	<h3>3. telnet towel.blinkenlights.nl</h3>
+	<article>
+		This command will start starwars movie in CMD, it works on Telnet protocol which needs to accessed first
+	</article>
+	<div class = "cmdparent">
+		<section class = "commandprompt">
+			<p>C:\Users\Administrator>telnet towel.blinkenlights.nl </p>
+		</section>
+	</div>
+	<br><hr><br>
+	<h3>4. doskey/history </h3>
+	<article>
+		This command will get the entire history of command prompt you had written in that particular session.
+	</article>
+	<div class = "cmdparent">
+		<section class = "commandprompt">
+			<p>C:\Users\Administrator>doskey/history  </p>
+		</section>
+	</div>
+	<br><hr><br>
+	<h3>5. ipconfig</h3>
+	<article>
+		 This will get various items related to networking in cmd 	
+	</article>
+	<div class = "cmdparent">
+		<section class = "commandprompt">
+			<p>C:\Users\Administrator>ipconfig  </p>
+		</section>
+	</div>
+	<br><hr><br>
+	<h3>6. ping WEBSITE</h3>
+	<article>
+		   This will find the ip-address of the website you wrote and some other details.  
+	</article>
+	<div class = "cmdparent">
+		<section class = "commandprompt">
+			<p>C:\Users\Administrator>doskey/ping mrtechtroid.github.io  </p>
+		</section>
+	</div>
+	<br><hr><br>
+	<h3>7. tracert </h3>
+	<article>
+		This will trace the whole route and jumps a packet takes to reach its destination. 
+	</article>
+	<div class = "cmdparent">
+		<section class = "commandprompt">
+			<p>C:\Users\Administrator>tracert mrtechtroid.github.io  </p>
+		</section>
+	</div>
+	<br><hr><br>
+	<h3>8. wmic product get nam </h3>
+	<article>
+		 This command can view all the installed apps in CMD.  
+	</article>
+	<div class = "cmdparent">
+		<section class = "commandprompt">
+			<p>C:\Users\Administrator>wmic product get nam  </p>
+		</section>
+	</div>
+	<br><hr><br>
+	<h3>9. sfc/scannow </h3>
+	<article>
+		  This command will check the system for any errors
+	</article>
+	<div class = "cmdparent">
+		<section class = "commandprompt">
+			<p>C:\Users\Administrator>doskey/history  </p>
+		</section>
+	</div>
+	<br><hr><br>
+	<h3>10. chkdsk </h3>
+	<article>
+		  This command will search for any errors in the disks and drives. Adding /r will check for bad sectors. Adding /f will fix any problems. /scan will scan for any problems. 
+	</article>
+	<div class = "cmdparent">
+		<section class = "commandprompt">
+			<p>C:\Users\Administrator>chkdsk  </p>
+		</section>
+	</div>
+	<br><hr><br>
+	<h3>11. driverquery </h3>
+	<article>
+		This will allow us to find all drivers installed in our PC.
+	</article>
+	<div class = "cmdparent">
+		<section class = "commandprompt">
+			<p>C:\Users\Administrator>driverquery  </p>
+		</section>
+	</div>
+	<br><hr><br>
+</section>
+<br><br>
+<footer>
+	<p>BGUIDE- Mr Techtroid</p>
+	<p>Site Version 1.0</p>
+</footer>
+</body>
+</html>
