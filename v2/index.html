@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- About Page -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MR TECHTROID V2.0</title>
+    <meta name="description" content="This Website Has Various Educational Apps And Simulations And Various Other Tools Which Will Help You Learning and Understanding New Concepts And Also Get You Started With Many Things.">
+    
+    <link rel="icon" href="/assets/favicon.png" type="image/icon type">
+
+    <!-- Google Fonts-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <!-- Lora -->
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,700&display=swap" rel="stylesheet">
+
+    
+    <!-- Font Awesome 4.7-->
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+	<!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KPN8JSN6DJ"></script>
+
+    <!-- Auto Full Screen - Mobile - Google Chrome -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <style>
+        body {
+            min-width: 620px;
+        }
+        .tabmenu {
+            overflow: hidden;
+            font-family: verdana;
+            background-color: yellow;
+            border-radius: 30px 30px 0px 0px;
+        }
+        .tabmenu a {
+            float: left;
+            color: #f44336;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+            border-radius: 30px 30px 30px 30px
+        }
+        .tabmenu a:hover {
+            background-color: #ddd;
+            color: black;
+            border-radius: 30px 30px 30px 30px
+        }
+        .tabmenu a#active {
+            background-color: #f44336;
+            color: white;
+        }
+        ::-webkit-scrollbar {
+            width: 12px;
+        }
+        ::-webkit-scrollbar-track {
+             background: #eb2d2d;
+        }
+        ::-webkit-scrollbar-thumb {
+                background: #2ce6df;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+        .fa {
+        padding: 20px;
+        font-size: 30px;
+        width: 30px;
+        text-align: center;
+        text-decoration: none;
+        border-radius: 50%;
+        }
+        .fa-youtube {
+            background: #bb0000;
+            color: white;
+            }
+        .fa-google { 
+            background: #dd4b39;
+            color: white;
+        }
+        #scgithub {
+            background: crimson;
+            color: white;
+        }
+        .videos {
+            border-radius: 40px 40px 40px 40px;
+            width: l;
+            border-width: 5px;
+            border-style:dotted;
+            border-color: orangered;
+            margin-bottom: 10px;
+            margin-left: 10px;
+            margin-right: 10px;
+            text-align: center;
+            display: inline-block;
+            
+        }
+        .viddh {
+            color:red;
+        }
+        .vidd {
+            color:darkblue;
+        }
+        .videotitle {
+            color: crimson;
+        }
+        #recupd {
+            display: inline-block;
+            padding-left: 100%;
+            animation: marquee 20s linear infinite;
+        }
+        @keyframes marquee {
+            0%   { transform: translate(0, 0); }
+            100% { transform: translate(-100%, 0); }
+        }
+        @media screen and (max-width: 460px) {
+            .videos {
+                width:95%
+            }
+            .embedvideo {
+                width:90%
+            }
+        }
+    </style>
+</head>
+<!-- Body: Main Content -->
+<body style="background-color: white; min-width: 330px;">
+
+    <div id = "mainbody" style="border-radius: 30px 30px 30px 30px; background-color: black;  color: white;">
+        <!-- Navigation Bar -->
+        
+        <div class="tabmenu">
+            <a class = "tablinks" href="#" onclick = "change('home',0)" id="active" style = "font-weight: bold;">HOME</a>
+            
+            <!-- Web And Learn Section Coming Soon.... Collecting Resources.... -->
+            <a class = "tablinks" href="#" onclick = "change('webapps',1)" style = "font-weight: bold;display:none">WEB APPS</a>
+            <a class = "tablinks" href="#" onclick = "change('learn',2)" style = "font-weight: bold;display:none">LEARN</a>
+            <!-- Still Under Development So It Has Been Hidden-->
+            <a class = "tablinks" href="#" onclick = "change('about',3)" style = "font-weight: bold;">ABOUT ME</a>
+            <a class = "tablinks" href="#" onclick = "change('contactus',4)" style = "font-weight: bold;">CONTACT</a>
+            <a href="https://github.com/mrtechtroid" target="blank" style = "color:black;font-size:140%" class= "fa fa-github"></a>
+            <a href="https://www.youtube.com/channel/UCfKlCOb1kuFO1wvs7R7E6ng" target="blank" style = "color:black;font-size:140%;" class= "fa fa-youtube-play"></a>
+            <p style = "font-family: Lora; color:orangered; float:right; margin-right: 10px; font-size: 15px;"><b><strong>MR TECHTROID V2.0.0</strong></b></p>
+        </div>
+        
+        <!-- Basic Info -->
+        <div id = "info" style = "background-color: cyan; color: darkblue; font-family: Consolas;font-size: 18px;">
+            <center><span style = "margin-top: 5px;text-align: center;font-weight: bold;margin:0px;padding: 0px;">A FEW LINES OF CODE CAN DO THE GREATEST THINGS.</span></center>
+            <div style = "overflow: hidden;white-space: nowrap;box-sizing: border-box;">
+                <b><span style = "color:darkred;z-index: 2;background-color: cyan;position: absolute;">Recent Updates:</span><span id = "recupd">Newest Update of Website!! V2.0.0 is out !!!! with exciting new style. </span></b>
+            </div>  
+        </div>
+        
+        <!-- Short Note Section -->
+        <div id = "home" class = "body">
+            <div id = "shortnote">
+                <h1 style = "color:deeppink;font-family:verdana;font-size:200%;text-align:center;background-color: lime;margin: 0;padding: 0;margin-bottom: 20px;">A Short Note</h1>
+                <article style = "color:red;font-family:verdana;font-size: 120%;padding-left: 5%"><b>
+                    Welcoming All Users to my Website. I Hope That my Projects And Pages Will Help you all in some way..<br><br>
+                    By Making This Website, I want to help fellow Developers, Teachers, Educational Institutions and everyone else by providing various simulations of various different topics of Math, Sciences and also develop some great apps, softwares and tools which might be used for a variety of purposes..  <br><br>
+                    Simulations and Website Content are not Open Source Licensed and are copyrighted. If you would like to use the code you Could use the Contact Form to take prior permission before using and then attribute me anywhere in the code, presentation, or anywhere else. <br><br> 
+                    <center>Thanks For Visiting.....</center></b>
+                </article>
+            </div>
+            <br><br>
+            <div id="footer" style="border-radius: 30px 30px 30px 30px;">
+                <hr color = "green" size = "5">
+                <h3><center>&copy Copyright 2021 Mr Techtroid </center></h3>
+            </div>
+        </div>
+        
+        <!-- About Us Section -->
+        <div class = "body" id = "about" hidden = "True" style="border-radius: 0px 0px 30px 30px; background-color: black;  color: white; margin: 0;padding: 0;">
+            <div id="header" style = " background-color: orangered;">
+                 <h1 style = "color: cyan;font-family:verdana;font-size:200%;text-align:center;margin: 0;padding: 0;">About Me</h1>
+                </div>
+                <center>
+                    <div id="simg" style = "text-align: center; display: inline-block;border-style: dotted; border-color: darkblue;border-width: 10px;margin-bottom: 20px;border-radius: 30px 30px 30px 30px;vertical-align:middle;">
+                        <img src = "https://avatars1.githubusercontent.com/u/64828294?s=460&v=4" alt = "MTT Profile Photo" style = "border-radius: 50%;width:250px;height:250px;border: greenyellow ; border-style: solid;" title = "EasterEgg{w33l_i_@m_th3_f1rst_one}"><br>
+                        <div id="socialbuttons" style = "border-radius: 30px 30px 30px 30px; margin-left: 5%; margin-right: 5%; width:fit-content;">
+                            <a href="https://www.youtube.com/channel/UCfKlCOb1kuFO1wvs7R7E6ng" class="fa fa-youtube" target=”_blank”></a>
+                            <a href="https://mrtechtroid.blogspot.com" class="fa fa-google" target=”_blank”></a>
+                            <a href="https://github.com/mrtechtroid" class="fa fa-github" target=”_blank” id = "scgithub"></a>
+                        </div>
+                    </div>
+                    <div id = "sabout" style = "display: inline-block;background-color: chocolate;border-radius: 30px 30px 30px 30px;border-style: dotted; border-color: darkblue;border-width: 10px;margin-bottom: 20px;vertical-align:middle;">
+                        <article style = "font-size: 120%;">
+                            1. I am Mr Techtroid from Bangalore,India 🇮🇳<br>
+                            2. Joined to Github on May 5th 2020 🎂<br>
+                            3. I like Programming And Coding 👍❤️<br>
+                            4. I am Fluent with Python, HTML-CSS, and Visual Basic 🎓<br>
+                            5. I’m currently learning More of The Above Languages 🌱<br>
+                        </article>
+                    </div> 
+                </center>
+            </div>
+        </div>
+
+        <!-- Contact Us Section -->
+        <div class = "body" id = "contactus" style=" background-color: black;  color: white;border-radius: 0px 0px 30px 30px;" hidden = "True">
+            <div id="header" style = " background-color: #822E81;">
+                <h1 style = "color:#20BF55;font-family:verdana;font-size:200%;text-align:center;margin: 0;padding: 0;margin-bottom: 20px;">Contact Me</h1>  
+            </div>
+            <div id="content">
+                <center><iframe id = "conform" src="https://docs.google.com/forms/d/e/1FAIpQLScH6t7-s6wI8oaVHW679E_SnoomyOUFbzr-W2Vuhja3SDDDXA/viewform?embedded=true" width = "90%" height="756" frameborder="5" marginheight="0" marginwidth="0" style = "border: greenyellow ; border-style: solid; border-radius: 30px 30px 30px 30px;">Loading…</iframe></center>
+            </div>
+            <br><br>
+        </div>
+
+        <!-- Learn More Section -->
+        <div class="body" id = "learn" hidden = "True" style=" background-color: black;  color: white; margin: 0;padding: 0;border-radius: 0px 0px 30px 30px;">
+            <div id="header" style = " background-color: magenta;">
+                 <h1 style = "color: blue;font-family:verdana;font-size:200%;text-align:center;margin: 0;padding: 0;margin-bottom: 20px;">Learn - Coming Soon</h1>
+             </div>
+             
+             <div id="content">
+                <!-- <div id="youtubevideos" style = "border-radius: 30px 30px 30px 30px; background-color: cyan;margin-left: 12px; margin-right:12px">
+                    <center>
+                    <h1 style = "color: blue;margin-top: 20px;">Favorate Youtube Videos</h1>
+                     <hr color = "green" size = "5">
+                     <h2 style = "color: maroon;">Learning Python</h2>
+                     <div id="videolist">
+                        <div class="videos">
+                            <h2 class = "videotitle">Full Course Through Basics Of Python</h2>
+                           <iframe class = "embedvideo" width="420" height="315" src="https://www.youtube.com/embed/videourl" style = "border-radius: 40px 40px 40px 40px; border-style: solid; border-color: mediumblue; border-width: 5px;"> </iframe>
+                           <h3><span class = "viddh">Channel:</span><span  class = "vidd">Random Video 1</span></h3>
+                           <h3><span class = "viddh">Brief Discription:</span><span  class = "vidd">This Video Goes Through In Depth About the Basic Fundamentals of Python, From Installing Python To developing Simple apps.</span></h3>
+                           <h3><span class = "viddh">Time:</span><span  class = "vidd">X Hours X Mins</span></h3>
+                        </div>
+                        <div class="videos">
+                            <h2 class = "videotitle">Full Course Through Basics Of Python</h2>
+                           <iframe class = "embedvideo" width="420" height="315" src="https://www.youtube.com/embed/videourl" style = "border-radius: 40px 40px 40px 40px; border-style: solid; border-color: mediumblue; border-width: 5px;"> </iframe>
+                           <h3><span class = "viddh">Channel:</span><span  class = "vidd">Random Video 1</span></h3>
+                           <h3><span class = "viddh">Brief Discription:</span><span  class = "vidd">This Video Goes Through In Depth About the Basic Fundamentals of Python, From Installing Python To developing Simple apps.</span></h3>
+                           <h3><span class = "viddh">Time:</span><span  class = "vidd">X Hours X Mins</span></h3>
+                        </div>
+                     </div>
+                    </center>
+                 </div> -->
+                 
+             </div>
+             <center>
+                <div id="suggestions" style = "text-align: center;border-radius: 30px 30px 30px 30px;border-width: 2px; border-style: solid; border-color: firebrick; background-color: greenyellow;width: max-content;bottom: 10px; right:10px;font-size: 125%;font-weight: bold;">
+                   <span id = "stthover" style = "font-size:125%; border-radius: 40px 40px 40px 40px;"><span id = "stooltip" style="margin-left: 10px; margin-right: 10px; margin-bottom: 10px;color: indigo;">Suggeest Me More Videos At The Contact Section</span><span style = "margin:10px;margin-top: 10px;">❗</span></span>
+               </div>
+           </center>
+         </div>
+         <!-- Web Applications -->
+        <div class = "body" id = "webapps" style=" background-color: black;  color: white;border-radius: 0px 0px 30px 30px;" hidden = "True">
+            <div id="header" style = " background-color:salmon;">
+                <h1 style = "color:#20BF55;font-family:verdana;font-size:200%;text-align:center;margin: 0;padding: 0;margin-bottom: 20px;">Web Apps</h1>  
+            </div>
+            <div id="content">
+
+            </div>
+            <br><br>
+        </div>
+    </div>
+    <!--
+        Copyright 2021 Mr Techtroid
+    -->
+    <script>
+        function change(bn,trno) {
+            document.getElementsByClassName('body')[0].hidden = "True"
+            document.getElementsByClassName('body')[1].hidden = "True"
+            document.getElementsByClassName('body')[2].hidden = "True"
+            document.getElementsByClassName('body')[3].hidden = "True"
+            document.getElementsByClassName('body')[4].hidden = "True"
+            document.getElementById(bn).hidden = ""
+            document.getElementsByClassName('tablinks')[0].id = ""
+            document.getElementsByClassName('tablinks')[1].id = ""
+            document.getElementsByClassName('tablinks')[2].id = ""
+            document.getElementsByClassName('tablinks')[3].id = ""
+            document.getElementsByClassName('tablinks')[4].id = ""
+            document.getElementsByClassName('tablinks')[trno].id = "active"
+        }
+    </script>
+    <script>
+        window.onload = function () {document.documentElement.requestFullscreen}
+    </script>
+    <noscript>
+        <style>
+            div {
+                display: none;
+            }
+        </style>
+        <body>
+            <section id = "mainbody" style="border-radius: 30px 30px 30px 30px; background-color: black;  color: white;">
+                <!-- Navigation Bar -->
+                
+                <section class="tabmenu">
+                    <a class = "tablinks" href="#" onclick = "change('home',0)" id="active" style = "font-weight: bold;">HOME</a>
+                    <a href="https://github.com/mrtechtroid" target="blank" style = "color:black;font-size:140%" class= "fa fa-github"></a>
+                    <a href="https://www.youtube.com/channel/UCfKlCOb1kuFO1wvs7R7E6ng" target="blank" style = "color:black;font-size:140%;" class= "fa fa-youtube-play"></a>
+                    <p style = "font-family: Lora; color:orangered; float:right; margin-right: 10px; font-size: 15px;"><b><strong>MR TECHTROID V2.0.0</strong></b></p>
+                </section>
+                
+                <!-- Basic Info -->
+                <section id = "info" style = "background-color: cyan; color: darkblue; font-family: Consolas;font-size: 18px;">
+                    <center><span style = "margin-top: 5px;text-align: center;font-weight: bold;margin:0px;padding: 0px;">JAVASCRIPT DISABLED.. PLEASE ENABLE JS TO MAKE THIS WEBSITE WORK PROPERLY</span></center>
+                </section>
+                
+                <!-- Short Note Section -->
+                <section id = "home" class = "body">
+                    <section id = "shortnote">
+                        <h1 style = "color:deeppink;font-family:verdana;font-size:200%;text-align:center;background-color: lime;margin: 0;padding: 0;margin-bottom: 20px;">A Short Note</h1>
+                        <article style = "color:red;font-family:verdana;font-size: 120%;padding-left: 5%"><b>
+                            Welcoming All Users to my Website. I Hope That my Projects And Pages Will Help you all in some way..<br><br>
+                            By Making This Website, I want to help fellow Developers, Teachers, Educational Institutions and everyone else by providing various simulations of various different topics of Math, Sciences and also develop some great apps, softwares and tools which might be used for a variety of purposes..  <br><br>
+                            Simulations and Website Content are not Open Source Licensed and are copyrighted. If you would like to use the code you Could use the Contact Form to take prior permission before using and then attribute me anywhere in the code, presentation, or anywhere else. <br><br> 
+                            <center>Thanks For Visiting.....</center></b>
+                        </article>
+                    </section>
+                    <br><br>
+                    <section id="footer" style="border-radius: 30px 30px 30px 30px;">
+                        <hr color = "green" size = "5">
+                        <h3><center>&copy Copyright 2021 Mr Techtroid </center></h3>
+                    </section>
+                </section>
+        </body>
+    </noscript>
+</body>
+</html>
