@@ -13,7 +13,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <!-- Lora -->
     <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,700&display=swap" rel="stylesheet">
-
+    <!-- Questrial -->
+    <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
     
     <!-- Font Awesome 4.7-->
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
@@ -47,7 +48,7 @@
             color: black;
             border-radius: 30px 30px 30px 30px
         }
-        .tabmenu a#active {
+        .tabmenu a.active {
             background-color: #f44336;
             color: white;
         }
@@ -105,7 +106,7 @@
         .videotitle {
             color: crimson;
         }
-        #recupd {
+        .recupd {
             display: inline-block;
             padding-left: 100%;
             animation: marquee 20s linear infinite;
@@ -122,41 +123,61 @@
                 width:90%
             }
         }
+        .ip-form{
+            padding: 12px 20px;
+            margin: 8px 0;
+            box-sizing: border-box;
+            border-color: #20BF55;
+            border-style: solid;
+            background-color: white;
+            width: clamp(200px,300px,400px);
+            font-family: Questrial;
+            color: crimson;
+            font-weight: bold;
+            
+        }
+        .ip-form-title{
+            font-family: Questrial;
+            color: chartreuse;
+            font-size: 20px;
+            padding: 0%;
+            margin: 0%;
+        }
     </style>
 </head>
 <!-- Body: Main Content -->
-<body style="background-color: white; min-width: 330px;">
+<body style="background-color:#373c45; min-width: 330px;">
 
     <div id = "mainbody" style="border-radius: 30px 30px 30px 30px; background-color: black;  color: white;">
         <!-- Navigation Bar -->
         
         <div class="tabmenu">
-            <a class = "tablinks" href="#" onclick = "change('home',0)" id="active" style = "font-weight: bold;">HOME</a>
+            <a class = "tablinks active" id = "tbl_home" href="#" onclick = "change('home','tbl_home')" id="active" style = "font-weight: bold;">HOME</a>
             
             <!-- Web And Learn Section Coming Soon.... Collecting Resources.... -->
-            <a class = "tablinks" href="#" onclick = "change('webapps',1)" style = "font-weight: bold;display:none">WEB APPS</a>
-            <a class = "tablinks" href="#" onclick = "change('learn',2)" style = "font-weight: bold;display:none">LEARN</a>
+            <a class = "tablinks" id = "tbl_webapps" href="#" onclick = "change('webapps','tbl_webapps')" style = "font-weight: bold;display:none">WEB APPS</a>
+            <a class = "tablinks" id = "tbl_learn" href="#" onclick = "change('learn','tbl_learn')" style = "font-weight: bold;display:none">LEARN</a>
             <!-- Still Under Development So It Has Been Hidden-->
-            <a class = "tablinks" href="#" onclick = "change('about',3)" style = "font-weight: bold;">ABOUT ME</a>
-            <a class = "tablinks" href="#" onclick = "change('contactus',4)" style = "font-weight: bold;">CONTACT</a>
+            <a class = "tablinks" id = "tbl_about" href="#" onclick = "change('about','tbl_about')" style = "font-weight: bold;">ABOUT ME</a>
+            <a class = "tablinks" id = "tbl_contactus" href="#" onclick = "change('contactme','tbl_contactus')" style = "font-weight: bold;">CONTACT</a>
             <a href="https://github.com/mrtechtroid" target="blank" style = "color:black;font-size:140%" class= "fa fa-github"></a>
             <a href="https://www.youtube.com/channel/UCfKlCOb1kuFO1wvs7R7E6ng" target="blank" style = "color:black;font-size:140%;" class= "fa fa-youtube-play"></a>
-            <p style = "font-family: Lora; color:orangered; float:right; margin-right: 10px; font-size: 15px;"><b><strong>MR TECHTROID V2.0.0</strong></b></p>
+            <p style = "font-family: Lora; color:orangered; float:right; margin-right: 10px; font-size: 15px;"><b><strong>MR TECHTROID V<span id = "v2_vno" >2.0.1</span></strong></b></p>
         </div>
         
         <!-- Basic Info -->
         <div id = "info" style = "background-color: cyan; color: darkblue; font-family: Consolas;font-size: 18px;">
-            <center><span style = "margin-top: 5px;text-align: center;font-weight: bold;margin:0px;padding: 0px;">A FEW LINES OF CODE CAN DO THE GREATEST THINGS.</span></center>
+            <center><span style = "margin-top: 5px;text-align: center;font-weight: bold;margin:0px;padding: 0px;" id = "v2_tagline">A FEW LINES OF CODE CAN DO THE GREATEST THINGS.</span></center>
             <div style = "overflow: hidden;white-space: nowrap;box-sizing: border-box;">
-                <b><span style = "color:darkred;z-index: 2;background-color: cyan;position: absolute;">Recent Updates:</span><span id = "recupd">Newest Update of Website!! V2.0.0 is out !!!! with exciting new style. </span></b>
+                <b><span style = "color:darkred;z-index: 2;background-color: cyan;position: absolute;">Recent Updates:</span><span id = "v2_upd" class = "recupd">UPDATES LOADING</span></b>
             </div>  
         </div>
         
         <!-- Short Note Section -->
         <div id = "home" class = "body">
             <div id = "shortnote">
-                <h1 style = "color:deeppink;font-family:verdana;font-size:200%;text-align:center;background-color: lime;margin: 0;padding: 0;margin-bottom: 20px;">A Short Note</h1>
-                <article style = "color:red;font-family:verdana;font-size: 120%;padding-left: 5%"><b>
+                <h1 style = "color:deeppink;font-family:verdana;font-size:200%;text-align:center;background-color: #282ced;margin: 0;padding: 0;margin-bottom: 20px;">A Short Note</h1>
+                <article style = "color:springgreen;font-family:verdana;font-size: 120%;padding-left: 5%"><b>
                     Welcoming All Users to my Website. I Hope That my Projects And Pages Will Help you all in some way..<br><br>
                     By Making This Website, I want to help fellow Developers, Teachers, Educational Institutions and everyone else by providing various simulations of various different topics of Math, Sciences and also develop some great apps, softwares and tools which might be used for a variety of purposes..  <br><br>
                     Simulations and Website Content are not Open Source Licensed and are copyrighted. If you would like to use the code you Could use the Contact Form to take prior permission before using and then attribute me anywhere in the code, presentation, or anywhere else. <br><br> 
@@ -176,7 +197,7 @@
                  <h1 style = "color: cyan;font-family:verdana;font-size:200%;text-align:center;margin: 0;padding: 0;">About Me</h1>
                 </div>
                 <center>
-                    <div id="simg" style = "text-align: center; display: inline-block;border-style: dotted; border-color: darkblue;border-width: 10px;margin-bottom: 20px;border-radius: 30px 30px 30px 30px;vertical-align:middle;">
+                    <div id="simg" style = "text-align: center; display: inline-block;margin-bottom: 20px;border-radius: 30px 30px 30px 30px;vertical-align:middle;margin-top: 10px;">
                         <img src = "https://avatars1.githubusercontent.com/u/64828294?s=460&v=4" alt = "MTT Profile Photo" style = "border-radius: 50%;width:250px;height:250px;border: greenyellow ; border-style: solid;" title = "EasterEgg{w33l_i_@m_th3_f1rst_one}"><br>
                         <div id="socialbuttons" style = "border-radius: 30px 30px 30px 30px; margin-left: 5%; margin-right: 5%; width:fit-content;">
                             <a href="https://www.youtube.com/channel/UCfKlCOb1kuFO1wvs7R7E6ng" class="fa fa-youtube" target=”_blank”></a>
@@ -184,29 +205,35 @@
                             <a href="https://github.com/mrtechtroid" class="fa fa-github" target=”_blank” id = "scgithub"></a>
                         </div>
                     </div>
-                    <div id = "sabout" style = "display: inline-block;background-color: chocolate;border-radius: 30px 30px 30px 30px;border-style: dotted; border-color: darkblue;border-width: 10px;margin-bottom: 20px;vertical-align:middle;">
+                    <div id = "sabout" style = "display: inline-block;margin-left:20px;margin-right:20px;margin-bottom: 20px;vertical-align:middle;color: chartreuse;border-color: tomato;border-style: solid;border-radius: 30px 30px 30px 30px;border-width: 10px;font-family: verdana;">
                         <article style = "font-size: 120%;">
-                            1. I am Mr Techtroid from Bangalore,India 🇮🇳<br>
-                            2. Joined to Github on May 5th 2020 🎂<br>
-                            3. I like Programming And Coding 👍❤️<br>
-                            4. I am Fluent with Python, HTML-CSS, and Visual Basic 🎓<br>
-                            5. I’m currently learning More of The Above Languages 🌱<br>
+                            I am Mr Techtroid from Bangalore,India 🇮🇳<br>
+                            Joined to Github on May 5th 2020 🎂<br>
+                            I like Programming And Coding 👍❤️<br>
+                            I am Fluent with Python, HTML-CSS, and Visual Basic 🎓<br>
+                            I’m currently learning More of The Above Languages 🌱<br>
+                            <span id = "v2_xabme"></span>
                         </article>
                     </div> 
                 </center>
+                <div id="footer" style="border-radius: 30px 30px 30px 30px;">
+                    <hr color = "green" size = "5">
+                    <h3><center>&copy Copyright 2021 Mr Techtroid </center></h3>
+                </div>
             </div>
         </div>
 
         <!-- Contact Us Section -->
-        <div class = "body" id = "contactus" style=" background-color: black;  color: white;border-radius: 0px 0px 30px 30px;" hidden = "True">
+        <!-- OLD Contact Form - Removed-->
+        <!-- <div class = "body" id = "contactus" style=" background-color: black;  color: white;border-radius: 0px 0px 30px 30px;" hidden = "True">
             <div id="header" style = " background-color: #822E81;">
                 <h1 style = "color:#20BF55;font-family:verdana;font-size:200%;text-align:center;margin: 0;padding: 0;margin-bottom: 20px;">Contact Me</h1>  
             </div>
-            <div id="content">
+            <!-- <div id="content">
                 <center><iframe id = "conform" src="https://docs.google.com/forms/d/e/1FAIpQLScH6t7-s6wI8oaVHW679E_SnoomyOUFbzr-W2Vuhja3SDDDXA/viewform?embedded=true" width = "90%" height="756" frameborder="5" marginheight="0" marginwidth="0" style = "border: greenyellow ; border-style: solid; border-radius: 30px 30px 30px 30px;">Loading…</iframe></center>
-            </div>
-            <br><br>
-        </div>
+            </div> -->
+            <!-- <br><br>
+        </div> -->
 
         <!-- Learn More Section -->
         <div class="body" id = "learn" hidden = "True" style=" background-color: black;  color: white; margin: 0;padding: 0;border-radius: 0px 0px 30px 30px;">
@@ -250,35 +277,126 @@
         <div class = "body" id = "webapps" style=" background-color: black;  color: white;border-radius: 0px 0px 30px 30px;" hidden = "True">
             <div id="header" style = " background-color:salmon;">
                 <h1 style = "color:#20BF55;font-family:verdana;font-size:200%;text-align:center;margin: 0;padding: 0;margin-bottom: 20px;">Web Apps</h1>  
-            </div>
-            <div id="content">
 
             </div>
+            <div id="content">
+            </div>
             <br><br>
+        </div>
+
+        <div class = "body" id = "contactme" style=" background-color: black;  color: white;border-radius: 0px 0px 30px 30px;" hidden = "True">
+            <div id="header" style = " background-color: #822E81;">
+                <h1 style = "color:#f0fc0d;font-family:verdana;font-size:200%;text-align:center;margin: 0;padding: 0;margin-bottom: 20px;">Contact</h1>  
+            </div>
+            <div id="content">
+                <center>
+                    <form id="form" onsubmit="sendmail()">
+                    <div>
+                        <p class = "ip-form-title">Email</p>
+                        <input class = "ip-form" type = "email" placeholder="example@example.com" id = "ip-email" required/>
+                    </div>
+                    <div>
+                        <p class = "ip-form-title">Name</p>
+                        <input class = "ip-form" type = "text" placeholder="John Smith" id = "ip-name" required/>
+                    </div>
+                    <div>
+                        <p class = "ip-form-title">Subject</p>
+                        <input  class = "ip-form" placeholder="Thank You Note "  id = "ip-subject" required/></label>
+                    </div>
+                    <div>
+                        <p class = "ip-form-title" style="text-align: center;">Message</p>
+                        <textarea  class = "ip-form" placeholder="Your Website Was Awesome. Loved It! " style = "height: 50px;resize: none;" id = "ip-message"></textarea>
+                    </div>
+                    <div>
+                        <p class = "ip-form-title" style="text-align: center;">Ideas?(Optional)</p>
+                        <textarea  class = "ip-form" placeholder="Make A Video Upon HTML-CSS " style = "height: 50px;resize: none;" id = "ip-ideas"></textarea>
+                    </div>
+                    
+                    
+                </form>
+                <div>
+                    <input class = "ip-form-title" style="background-color: darkorchid;" type="submit" name="submit"  onclick="sendmail()"/>
+                    <button class = "ip-form-title" style="background-color: darkorchid;"  name="sub" value="Google Forms" onclick="document.location ='https:/docs.google.com/forms/d/1GgBU1zuR1X7XyNVW3J50Ng7-zwiHgpRRHeUpM923Eto/viewform'" >Detailed Form</button>
+                <!-- <script src = "/js/captcha.js"></script> -->
+                <!-- CAPTCHA JS REMOVED - Will Be Added In Future Version-->
+                <!-- </div>
+                    <div id = "captchajsmain" style = "background-color: white;max-width: max-content;max-height: max-content;background-color: crimson;border: blue;border-width: 3px;border-style: solid;border-radius: 10px;">
+                        <div id = "ctpimgholder">
+                            <center>
+                                <canvas id = "ip-captcha-img" width="100" height="50" style="z-index: 4;">Your Browser Doesnt Support JS</canvas>
+                                <div style = "width: 150px;height: 10px;font-size: 10px;margin: 0%;padding: 0%;">CAPTCHA JS<span class = "fa fa-refresh" onclick = "master();" style = "color: blue;font-size: 10px;margin: 0%;padding: 0%;background-color: cornsilk;"></span><span class = "fa fa-check" onclick = "verifycptc();" style = "color: green;font-size: 10px;margin: 0%;padding: 0%;background-color: yellowgreen;"></span></div>
+                            </center>
+                        </div>
+                        <div id = "ctpvalidator">
+                            <input type = "password" placeholder="CAPTCHA" id = "ip-captcha" style = "padding: 12px 20px;margin: 8px 0;box-sizing: border-box;background-color: cyan;color: white;">
+                        </div>
+                    </div> -->
+                </center>
+            </div>
+            <br><br>
+            <div id="footer" style="border-radius: 30px 30px 30px 30px;">
+                <hr color = "green" size = "5">
+                <h3><center>&copy Copyright 2021 Mr Techtroid </center></h3>
+            </div>
         </div>
     </div>
     <!--
         Copyright 2021 Mr Techtroid
     -->
+    <script src = "/v2update.js"></script>
     <script>
-        function change(bn,trno) {
+        function change(bn,tr) {
             document.getElementsByClassName('body')[0].hidden = "True"
             document.getElementsByClassName('body')[1].hidden = "True"
             document.getElementsByClassName('body')[2].hidden = "True"
             document.getElementsByClassName('body')[3].hidden = "True"
             document.getElementsByClassName('body')[4].hidden = "True"
+            // document.getElementsByClassName('body')[5].hidden = "True"
             document.getElementById(bn).hidden = ""
-            document.getElementsByClassName('tablinks')[0].id = ""
-            document.getElementsByClassName('tablinks')[1].id = ""
-            document.getElementsByClassName('tablinks')[2].id = ""
-            document.getElementsByClassName('tablinks')[3].id = ""
-            document.getElementsByClassName('tablinks')[4].id = ""
-            document.getElementsByClassName('tablinks')[trno].id = "active"
+            document.getElementsByClassName('tablinks')[0].className = "tablinks"
+            document.getElementsByClassName('tablinks')[1].className = "tablinks"
+            document.getElementsByClassName('tablinks')[2].className = "tablinks"
+            document.getElementsByClassName('tablinks')[3].className = "tablinks"
+            document.getElementsByClassName('tablinks')[4].className = "tablinks"
+            document.getElementById(tr).className = "tablinks active"
         }
     </script>
     <script>
-        window.onload = function () {document.documentElement.requestFullscreen}
+        function ifcls(){
+            document.getElementById('tempIF_G').remove();
+        }
+        function sendmail(){
+            if (document.getElementById("ip-email").value == "" || document.getElementById("ip-name").value == ""||document.getElementById("ip-subject").value == "" || document.getElementById("ip-message").value == ""){
+                alert("Some Fields Are Missing!!!")
+            }else{
+                if (document.getElementById("ip-ideas").value == ""){document.getElementById("ip-ideas").value = "No Ideas"}
+                if (document.getElementById("ip-email").value.includes(" ")){alert("Spaces In Email Is Not Valid");throw new Error("")}
+                document.getElementById("ip-name").value =  document.getElementById("ip-name").value.replaceAll(" ","+")
+                document.getElementById("ip-subject").value = document.getElementById("ip-subject").value.replaceAll(" ","+") 
+                document.getElementById("ip-message").value = document.getElementById("ip-message").value.replaceAll(" ","+")
+                document.getElementById("ip-ideas").value = document.getElementById("ip-ideas").value.replaceAll(" ","+")
+                data = "?entry.1120375066="+document.getElementById("ip-email").value + "&entry.1808878457=" + document.getElementById("ip-name").value + "&entry.665491960=" + document.getElementById("ip-subject").value + "&entry.652909799=" + document.getElementById("ip-message").value + "&entry.435683521=" + document.getElementById("ip-ideas").value + "&entry.656874236=Recommendations"
+                f_url = "https://docs.google.com/forms/d/e/1FAIpQLSdocdqyhyoTZrXcF2RejwMP35eB6akOG95aZoUxU5IAs3Nwdw/formResponse" + data
+                ifeq =  document.createElement("iframe")
+                ifeq.id = "tempIF_G"
+                ifeq.width = "100px"
+                ifeq.height = "100px"
+                ifeq.style.display = "none"
+                ifeq.onload = "ifcls();"
+                ifeq.src = f_url
+                document.getElementsByTagName("body")[0].appendChild(ifeq);
+                ifeq.onload = "ifeq.remove();"
+                document.getElementById("ip-email").value = ""
+                document.getElementById("ip-name").value =  ""
+                document.getElementById("ip-subject").value = "" 
+                document.getElementById("ip-message").value = ""
+                document.getElementById("ip-ideas").value = ""
+                alert("We Will Be Looking On This Soon")
+                ifeq.addEventListener("load", ifcls(), false);
+            }
+        }
     </script>
+    
     <noscript>
         <style>
             div {
@@ -300,19 +418,6 @@
                 <section id = "info" style = "background-color: cyan; color: darkblue; font-family: Consolas;font-size: 18px;">
                     <center><span style = "margin-top: 5px;text-align: center;font-weight: bold;margin:0px;padding: 0px;">JAVASCRIPT DISABLED.. PLEASE ENABLE JS TO MAKE THIS WEBSITE WORK PROPERLY</span></center>
                 </section>
-                
-                <!-- Short Note Section -->
-                <section id = "home" class = "body">
-                    <section id = "shortnote">
-                        <h1 style = "color:deeppink;font-family:verdana;font-size:200%;text-align:center;background-color: lime;margin: 0;padding: 0;margin-bottom: 20px;">A Short Note</h1>
-                        <article style = "color:red;font-family:verdana;font-size: 120%;padding-left: 5%"><b>
-                            Welcoming All Users to my Website. I Hope That my Projects And Pages Will Help you all in some way..<br><br>
-                            By Making This Website, I want to help fellow Developers, Teachers, Educational Institutions and everyone else by providing various simulations of various different topics of Math, Sciences and also develop some great apps, softwares and tools which might be used for a variety of purposes..  <br><br>
-                            Simulations and Website Content are not Open Source Licensed and are copyrighted. If you would like to use the code you Could use the Contact Form to take prior permission before using and then attribute me anywhere in the code, presentation, or anywhere else. <br><br> 
-                            <center>Thanks For Visiting.....</center></b>
-                        </article>
-                    </section>
-                    <br><br>
                     <section id="footer" style="border-radius: 30px 30px 30px 30px;">
                         <hr color = "green" size = "5">
                         <h3><center>&copy Copyright 2021 Mr Techtroid </center></h3>
