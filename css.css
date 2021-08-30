@@ -36,8 +36,11 @@ background-size: cover;
     padding:20px;
     padding-right: 10px;
     padding-left: 10px;
-    color:white;
+    color:yellow;
     box-sizing: border-box;
+    margin:10px;
+    margin-left:5px;
+    margin-right:5px;
 }
 #navtoolbar a:hover, a:focus {
     color:tomato;
@@ -58,7 +61,7 @@ background-size: cover;
     animation-name: head;
     animation-duration: 4s;
     animation-iteration-count: infinite;
-    color:white;
+    color:yellow;
 }
 #text2{
     animation-delay: 2s;
@@ -239,8 +242,9 @@ background-size: cover;
   #slideshow {
     overflow: hidden;
     height: 300px;
-    width: 400px;
+    width: 300px;
     margin: 0 auto;
+    font-family:Questrial;
   }
 
   /* Style each of the sides 
@@ -248,7 +252,7 @@ background-size: cover;
   .slide {
     float: left;
     height: 510px;
-    width: 400px;
+    width: 300px;
   }
 
   /* Add animation to the slides */
@@ -256,7 +260,7 @@ background-size: cover;
 
     /* Calculate the total width on the
     basis of number of slides */
-    width: calc(400px * 4);
+    width: calc(300px * 4);
       
     /* Specify the animation with the
     duration and speed */
@@ -292,15 +296,15 @@ background-size: cover;
     }
 
     40% {
-      margin-left: calc(-400px * 1);
+      margin-left: calc(-300px * 1);
     }
 
     60% {
-      margin-left: calc(-400px * 2);
+      margin-left: calc(-300px * 2);
     }
 
     80% {
-      margin-left: calc(-400px * 3);
+      margin-left: calc(-300px * 3);
     }
   }
 .slide_heading {
@@ -308,7 +312,7 @@ background-size: cover;
     color:navy;
 }
 .sld_txt {
-    font: 18px Roboto bold;
+    font: 20px bold;
 }
 .a_1123{
     text-decoration: none;
@@ -317,4 +321,7 @@ background-size: cover;
 .a_1124{
     text-decoration: none;
     color:crimson;
+}
+#projects #pro_title {
+    color:springgreen
 }

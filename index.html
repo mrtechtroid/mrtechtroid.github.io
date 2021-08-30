@@ -63,7 +63,7 @@
         </div>
     </div>
 
-    <hr style="width:80%;text-align:center">
+    <hr style="width:80%;text-align:center" class = "hrline">
     <div id="about" class="section">
         <div id="abt_title">
             <span style="font-size: 50px;font:Roboto  bold;color:springgreen;font-weight: bold;">About Me.</span>
@@ -82,10 +82,10 @@
             </div>
         </div>
     </div>
-    <hr style="width:80%;text-align:center">
+    <hr style="width:80%;text-align:center" class = "hrline"> 
     <div id="projects" class="section">
         <div id="pro_title">
-            <span style="font-size: 50px;font:Roboto  bold;color:springgreen;font-weight: bold;">Projects.</span>
+            <span style="font-size: 50px;font:Roboto  bold;font-weight: bold;">Projects.</span>
             <span style="font-size: 30px;font:Roboto  bold;color:rgb(238, 255, 0);font-weight: bold;"></span><br>
         </div>
         <div id="pro_content">
@@ -115,12 +115,12 @@
               </div>
         </div>
     </div>
-    <hr style="width:80%;text-align:center">
+    <hr style="width:80%;text-align:center" class = "hrline">
     <div id="contact" class="section">
         <div id="ct_abt">
             <span style="font-size: 50px;font:Roboto  bold;color:springgreen;font-weight: bold;">Contact Me.</span>
             <span style="font-size: 30px;font:Roboto  bold;color:rgb(238, 255, 0);font-weight: bold;"></span><br>
-            <a id="cont_mail" href="mailto:mrtechtroid@outlook.com">Contact Me On My Mail</a>
+            <a id="cont_mail" href="mailto:mrtechtroid@gmail.com">Contact Me On My Mail</a>
         </div>
         <div id="ct_content">
             <center>
@@ -148,14 +148,14 @@
                             style="height: 50px;resize: none;" id="ip-ideas"></textarea>
                     </div>
                     <div>
-                        <input class="ip-form-title" style="background-color: rgb(204, 50, 50);" type="submit"
+                        <input class="ip-form-title" style="background-color: rgb(204, 50, 50);padding:10px" type="submit"
                             name="submit" onclick="sendmail()" />
                     </div>
                 </form>
             </center>
         </div>
     </div>
-    <hr style="width:80%;text-align:center">
+    <hr style="width:80%;text-align:center" class = "hrline">
     <div id="socialfeed" style="overflow: hidden;white-space: nowrap;box-sizing: border-box;">
         <span id="sc_links"><a id="sc_feed" href="#socialfeed">Socials:</a><a target="_blank"
                 href="https://www.youtube.com/channel/UCfKlCOb1kuFO1wvs7R7E6ng/featured">youtube</a><a target="_blank"
@@ -167,9 +167,11 @@
     <hr style="width:80%;text-align:center">
     <div id="footer">
         <span id="ft_det">&copy; Copyright 2021 Mr Techtroid</span>
-        <span id="ft_det">Older Versions:<a href="https://mrtechtroid.github.io/v1/">V1</a><a
+        <span id="ft_det" style="color:lime;">Older Versions:<a href="https://mrtechtroid.github.io/v1/">V1</a><a
                 href="https://mrtechtroid.github.io/v2/">V2</a><a
                 href="https://mrtechtroid.github.io/rd.html">Redirector</a></span>
+        <span id="ft_det" style="color:lime;">Other Layouts:<a href="https:">0</a><a
+                    href="?l1">1</a></span>
         <div class="custom-shape-divider-bottom-1630205279">
             <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
                 preserveAspectRatio="none">
@@ -212,6 +214,17 @@
                 alert("We Will Be Looking On This Soon")
                 ifeq.addEventListener("load", ifcls(), false);
             }
+        }
+    </script>
+    <script>
+        refer = document.location.search
+        if (refer == "?l1"){
+            a = document.createElement("link")
+            a.rel = "stylesheet"
+            a.href = "l1.css"
+            document.getElementsByTagName("head")[0].appendChild(a)
+        }else {
+
         }
     </script>
 </body>
