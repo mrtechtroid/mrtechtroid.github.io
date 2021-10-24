@@ -79,9 +79,9 @@
             onclick="document.location ='https://mrtechtroid.github.io/'">
     </div>
     <div id="urlbox"
-        style="width: 300px;position:absolute;top: 20px;left: 50%;transform: translate(-50%, -50%);margin: 0 auto;background-color: white;height:30px;border:lime 4px solid;display: flex;align-items: center;justify-content: center;">
+        style="width: 320px;position:absolute;top: 20px;left: 50%;transform: translate(-50%, -50%);margin: 0 auto;background-color: white;height:30px;border:lime 4px solid;display: flex;align-items: center;justify-content: center;">
         <input id="url_protocol" type="text" value="https" style="width: 30px;"><input id="frame_url"
-            type="text"><button class="btn" onclick="pp1()">➜</button>
+            type="text"><button class="btn" onclick="pp1()">➜</button><button class="btn" onclick="pp2()">A</button><button class="btn" onclick="pp3()">B</button>
     </div>
     <iframe id="proxy_frame" src="https://mrtechtroid.github.io/" frameborder="0"
         style="overflow:hidden;display: block;width: 100vw;border: none;height: 100vh;"></iframe>
@@ -111,7 +111,13 @@
 </script>
 <script>
     function pp1() {
-        document.getElementById('proxy_frame').src = document.getElementById('url_protocol').value + ':/' + document.getElementById('frame_url').value
+        document.getElementById('proxy_frame').src = document.getElementById('url_protocol').value + ':/'+ '/' + document.getElementById('frame_url').value
+    }
+    function pp2() {
+        document.getElementById('proxy_frame').src = document.getElementById('url_protocol').value + ':/'+ '/' + "www.browserling.com/browse/win/7/chrome/92/" + document.getElementById('frame_url').value
+    }
+    function pp3() {
+        document.getElementById('proxy_frame').src = document.getElementById('url_protocol').value + ':/'+ '/' + "web.archive.org/web/" + document.getElementById('frame_url').value
     }
 </script>
 <!-- He He Thanks For Your Data-->
