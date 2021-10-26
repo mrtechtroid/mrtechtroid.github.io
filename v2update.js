@@ -12,7 +12,7 @@ function updatelogs(){
 // .then(response => response.json())
 // .then(json => {updatejsonlogs(json)})
 async function get() {
-    let obj = await (await fetch('https://script.google.com/macros/s/AKfycbxr5RAnjxHkiniaMxeSEZezxnO103r9KmmBnF2-9KDMH5xDWDqCfoIPAFoE1VltVlHm0w/exec')).json();
+    let obj = await (await fetch('https://script.google.com/macros/s/AKfycbxp-3K8u1lwlbWhtZTzz62HsuDD4oc3OG4uDzRYixd0b1f2-oB5NBoEdwuKePr-_-WISA/exec')).json();
     return obj;
 }
 var json;
@@ -20,4 +20,4 @@ var json;
   json = await get()
   updatelogs()
 })()
-
+// https://script.google.com/macros/s/AKfycbxr5RAnjxHkiniaMxeSEZezxnO103r9KmmBnF2-9KDMH5xDWDqCfoIPAFoE1VltVlHm0w/exec 
