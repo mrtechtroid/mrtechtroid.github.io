@@ -160,7 +160,7 @@
             <!-- Still Under Development So It Has Been Hidden-->
             <a class = "tablinks" id = "tbl_about" href="#" onclick = "change('about','tbl_about')" style = "font-weight: bold;">ABOUT</a>
 	    <a class = "tablinks" id = "tbl_edu" href="https://mrtechtroid.github.io/edu/" style = "font-weight: bold;">EDU</a>
-            <a class = "tablinks" id = "tbl_contactus" href="#" onclick = "change('contactme','tbl_contactus')" style = "font-weight: bold;">CONTACT</a>
+            <a class = "tablinks" id = "tbl_contactus" href="#" onclick = "change('contactus','tbl_contactus')" style = "font-weight: bold;">CONTACT</a>
             <a href="https://github.com/mrtechtroid" target="blank" style = "color:black;font-size:140%" class= "fa fa-github"></a>
             <a href="https://www.youtube.com/channel/UCfKlCOb1kuFO1wvs7R7E6ng" target="blank" style = "color:black;font-size:140%;" class= "fa fa-youtube-play"></a>
             <p style = "font-family: Lora; color:orangered; float:right; margin-right: 10px; font-size: 15px;"><b><strong>MR TECHTROID V<span id = "v2_vno" >2.0.1</span></strong></b></p>
@@ -229,7 +229,7 @@
         <!-- <div class = "body" id = "contactus" style=" background-color: black;  color: white;border-radius: 0px 0px 30px 30px;" hidden = "True">
             <div id="header" style = " background-color: #822E81;">
                 <h1 style = "color:#20BF55;font-family:verdana;font-size:200%;text-align:center;margin: 0;padding: 0;margin-bottom: 20px;">Contact Me</h1>  
-            </div>
+            </div> -->
             <!-- <div id="content">
                 <center><iframe id = "conform" src="https://docs.google.com/forms/d/e/1FAIpQLScH6t7-s6wI8oaVHW679E_SnoomyOUFbzr-W2Vuhja3SDDDXA/viewform?embedded=true" width = "90%" height="756" frameborder="5" marginheight="0" marginwidth="0" style = "border: greenyellow ; border-style: solid; border-radius: 30px 30px 30px 30px;">Loading…</iframe></center>
             </div> -->
@@ -285,7 +285,7 @@
             <br><br>
         </div>
 
-        <div class = "body" id = "contactme" style=" background-color: black;  color: white;border-radius: 0px 0px 30px 30px;" hidden = "True">
+        <div class = "body" id = "contactus" style=" background-color: black;  color: white;border-radius: 0px 0px 30px 30px;" hidden = "True">
             <div id="header" style = " background-color: #822E81;">
                 <h1 style = "color:#f0fc0d;font-family:verdana;font-size:200%;text-align:center;margin: 0;padding: 0;margin-bottom: 20px;">Contact</h1>  
             </div>
@@ -344,7 +344,7 @@
     <!--
         Copyright 2021 Mr Techtroid
     -->
-    <script src = "/v2update.js"></script>
+    <script src = "v2update.js"></script>
     <script>
         function change(bn,tr) {
             document.getElementsByClassName('body')[0].hidden = "True"
@@ -359,6 +359,7 @@
             document.getElementsByClassName('tablinks')[2].className = "tablinks"
             document.getElementsByClassName('tablinks')[3].className = "tablinks"
             document.getElementsByClassName('tablinks')[4].className = "tablinks"
+            document.getElementsByClassName('tablinks')[5].className = "tablinks"
             document.getElementById(tr).className = "tablinks active"
         }
     </script>

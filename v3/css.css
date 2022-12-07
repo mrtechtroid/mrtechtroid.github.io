@@ -1,0 +1,327 @@
+body {
+    background-color: black;
+    font-family: Roboto;
+    margin:0px;
+    background-color: #000000;
+background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 800 800'%3E%3Cg %3E%3Ccircle fill='%23000000' cx='400' cy='400' r='600'/%3E%3Ccircle fill='%23230046' cx='400' cy='400' r='500'/%3E%3Ccircle fill='%232f0052' cx='400' cy='400' r='400'/%3E%3Ccircle fill='%233b075e' cx='400' cy='400' r='300'/%3E%3Ccircle fill='%2348156a' cx='400' cy='400' r='200'/%3E%3Ccircle fill='%23552277' cx='400' cy='400' r='100'/%3E%3C/g%3E%3C/svg%3E");
+background-attachment: fixed;
+background-size: cover;
+/* background by SVGBackgrounds.com */
+}
+#navbar {
+    height:100px;
+
+    padding-left: 5%;
+    padding-right: 5%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+#logo {
+    width: 100px;
+    height: 100px;
+
+}
+#navtoolbar {
+    font-size: 20px;
+    color:white;
+    font-family: Roboto;
+    font-weight: bold;
+    margin-left: 40px;
+    margin:20px;
+    padding:10px;
+}
+#navtoolbar a{
+    text-decoration: none;
+    padding:20px;
+    padding-right: 10px;
+    padding-left: 10px;
+    color:yellow;
+    box-sizing: border-box;
+    margin:10px;
+    margin-left:5px;
+    margin-right:5px;
+}
+#navtoolbar a:hover, a:focus {
+    color:tomato;
+}
+.section {
+    height: 400px;
+
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-evenly; */
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.headtext{
+    font-size: 20px;
+    animation-name: head;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    color:yellow;
+}
+#text2{
+    animation-delay: 2s;
+}
+
+@keyframes head {
+    0% {font-size:20px; opacity:1;}
+    50% {font-size:0; opacity:0;}
+    100% {font-size:20px;opacity:1;}
+};
+#con {
+    flex-basis: 40%;
+    margin-left:20px;
+    padding: 30px;;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-image:url("/v3/images/blob-head.svg");
+}
+#socialfeed {
+    height: 50px;
+    color:darkblue;
+    font-size: 20px;
+    padding:10px;
+    text-decoration: none;
+    font-weight: 600;
+    color: #fff;
+
+    text-transform: uppercase;
+    margin:10px;
+}
+#socialfeed a{
+    margin: 10px;
+    text-decoration: none;
+    color:rgb(217, 255, 0);
+}
+
+#socialfeed a:hover,a:focus {
+    color:rgb(255, 17, 0)
+}
+#footer {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    height: 100px;
+    position: relative;
+}
+#ft_det {
+    color: rgb(236, 195, 13);
+    font-size:20px;
+    font-family: Roboto;
+    text-align: center;
+}
+#ft_det a{
+    color:fuchsia;
+    text-decoration: none;
+    margin:10px;
+}
+#cont_mail {
+    text-decoration: none;
+    color:white;
+    text-decoration: underline;
+
+}
+.ip-form{
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border-color: #20BF55;
+    border-style: solid;
+    background-color: white;
+    width: 300px;
+    font-family: Questrial;
+    color: crimson;
+    font-weight: bold;
+    
+}
+.ip-form-title{
+    font-family: Questrial;
+    color: chartreuse;
+    font-size: 20px;
+    padding: 0%;
+    margin: 0%;
+}
+.ip-form:hover .ip-form:focus {
+    border-color: darkorange;
+}
+#ft_content {
+    padding:10px;
+}
+#contact {
+    height: max-content;
+    display: flex;
+    flex-flow: row-reverse wrap;
+    justify-content: space-around;
+}
+#ct_abt {
+    width: max-content;
+    margin:10px;
+}
+#titlepage {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    height: 80vh;
+}
+#sc_links{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+#about {
+    display: flex;
+    flex-flow: row-reverse wrap;
+    justify-content: space-around;
+}
+#abt_title {
+    width: 300px;
+    margin:10px;
+}
+#abt_content {
+    width: 300px;
+}
+#main_heading:hover, #main_heading:focus {
+    color:red;
+}
+.custom-shape-divider-bottom-1630205279 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+    z-index: -1;
+}
+
+.custom-shape-divider-bottom-1630205279 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 164px;
+}
+
+.custom-shape-divider-bottom-1630205279 .shape-fill {
+    fill: #ffffff8c;
+}
+#sc_feed {
+    color:crimson;
+}
+#projects {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+#pro_title {
+    width: 300px;
+    margin:10px;
+}
+#pro_content {
+    width: 300px;
+}
+::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: rgb(236, 9, 9);
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgb(250, 101, 2);
+  }
+  /* Styling the area of the slides */
+  #slideshow {
+    overflow: hidden;
+    height: 300px;
+    width: 300px;
+    margin: 0 auto;
+    font-family:Questrial;
+  }
+
+  /* Style each of the sides 
+  with a fixed width and height */
+  .slide {
+    float: left;
+    height: 510px;
+    width: 300px;
+  }
+
+  /* Add animation to the slides */
+  .slide-wrapper {
+
+    /* Calculate the total width on the
+    basis of number of slides */
+    width: calc(300px * 4);
+      
+    /* Specify the animation with the
+    duration and speed */
+    animation: slide 10s ease infinite;
+  }
+
+  /* Set the background color
+  of each of the slides */
+  .slide:nth-child(1) {
+    background: yellow;
+  }
+
+  .slide:nth-child(2) {
+    background: pink;
+  }
+
+  .slide:nth-child(3) {
+    background: red;
+  }
+
+  .slide:nth-child(4) {
+    background: olive;
+  }
+
+  /* Define the animation 
+  for the slideshow */
+  @keyframes slide {
+
+    /* Calculate the margin-left for 
+    each of the slides */
+    20% {
+      margin-left: 0px;
+    }
+
+    40% {
+      margin-left: calc(-300px * 1);
+    }
+
+    60% {
+      margin-left: calc(-300px * 2);
+    }
+
+    80% {
+      margin-left: calc(-300px * 3);
+    }
+  }
+.slide_heading {
+    font:Roboto 20px bold;
+    color:navy;
+}
+.sld_txt {
+    font: 20px bold;
+}
+.a_1123{
+    text-decoration: none;
+    color:cyan;
+}
+.a_1124{
+    text-decoration: none;
+    color:crimson;
+}
+#projects #pro_title {
+    color:springgreen
+}

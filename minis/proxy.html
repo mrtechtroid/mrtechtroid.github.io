@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MTT Proxy</title>
+
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background-color: black;
+            background-color: black;
+            font-family: Questrial;
+            margin: 0px;
+            min-width: 310px;
+        }
+
+        #navbar {
+            height: 100px;
+            padding-left: 5%;
+            padding-right: 5%;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            z-index: 3;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            pointer-events: none;
+            justify-content: center;
+        }
+
+        #logo {
+            width: 100px;
+            height: 100px;
+            pointer-events: auto;
+        }
+
+        .section {
+            height: 400px;
+
+            display: flex;
+            flex-direction: row;
+            /* justify-content: space-evenly; */
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #con {
+            flex-basis: 40%;
+            margin-left: 20px;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #linkgen:hover #linkgen:focus {
+            background-color: rgb(30, 128, 0);
+        }
+
+        .btn {
+            background-color: yellow;
+            border: tomato 2px solid;
+        }
+    </style>
+</head>
+
+<body style="margin:0px;padding:0px;overflow:hidden">
+    <div id="navbar">
+        <img src="https://mrtechtroid.github.io/assets/MTT_prev_ui.png" id="logo" alt="MTT Logo"
+            onclick="document.location ='https://mrtechtroid.github.io/'">
+    </div>
+    <div id="urlbox"
+        style="width: 320px;position:absolute;top: 20px;left: 50%;transform: translate(-50%, -50%);margin: 0 auto;background-color: white;height:30px;border:lime 4px solid;display: flex;align-items: center;justify-content: center;">
+        <input id="url_protocol" type="text" value="https" style="width: 30px;"><input id="frame_url"
+            type="text"><button class="btn" onclick="pp1()">➜</button><button class="btn" onclick="pp2()">A</button><button class="btn" onclick="pp3()">B</button>
+    </div>
+    <iframe id="proxy_frame" src="https://mrtechtroid.github.io/v3/" frameborder="0"
+        style="overflow:hidden;display: block;width: 100vw;border: none;height: 100vh;"></iframe>
+</body>
+<script>
+    var keyspressed = ""
+    document.addEventListener('keydown', function (event) {
+        keyspressed += String.fromCharCode(event.keyCode)
+        console.log(keyspressed)
+    });
+    document.getElementsByTagName("iframe")[0].contentWindow.document.addEventListener('keydown', function (event) {
+        keyspressed += String.fromCharCode(event.keyCode)
+        console.log(keyspressed)
+    });
+    document.onkeypress = function (e) {
+        e = e || window.event;
+        console.log(String.fromCharCode(e.keyCode))
+        // use e.keyCode
+    };
+    // var dispatchChange = function () {
+    //     iframe = document.getElementById("proxy_frame")
+    //     var newHref = iframe.contentWindow.location.href;
+    //     document.getElementById("frame_url").value = newHref
+    // };
+    // setTimeout(dispatchChange, 1000);
+    capture();
+</script>
+<script>
+    function pp1() {
+        document.getElementById('proxy_frame').src = document.getElementById('url_protocol').value + ':/'+ '/' + document.getElementById('frame_url').value
+    }
+    function pp2() {
+        document.getElementById('proxy_frame').src = document.getElementById('url_protocol').value + ':/'+ '/' + "www.browserling.com/browse/win/7/chrome/92/" + document.getElementById('frame_url').value
+    }
+    function pp3() {
+        document.getElementById('proxy_frame').src = document.getElementById('url_protocol').value + ':/'+ '/' + "web.archive.org/web/" + document.getElementById('frame_url').value
+    }
+</script>
+<!-- He He Thanks For Your Data-->
+
+</html>
