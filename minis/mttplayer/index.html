@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/assets/MTT_1.png">
+    <meta name="language" content="English">
+    <meta name="author" content="Mr Techtroid">
+    <meta name="robots" content="noindex, nofollow">
+
+    <link rel="stylesheet" href="/v4/v4_style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <title>MTT Player</title>
+</head>
+
+<body>
+    <div id="container" class="card yt_plr">
+        <div id="navbar">
+            <img src="/assets/MTT_1.png" alt="MTT Logo" id="mtt_head">
+            <div id="navtoolbar">MTT Player</div>
+        </div>
+        <div id="yt_holdr"
+            style="width:70vw;height:70vh;display: flex; justify-content: center;margin-top:10px;flex-direction: column;align-items: center;">
+            <div style="width:68vw;height:60vh;pointer-events: none;background-color: #122235;" id="yt_player"></div>
+            <div id="toolbar" class="card"
+                style="display: flex;flex-direction: column;align-items: center; z-index: 3;width:68vw;color: white;border-radius: 0px 0px 12px 12px;">
+                <div style = "display:flex;flex-direction:row;justify-content: space-evenly;width:30vw">
+                    <span class="material-icons sc_lnk" id="tp_bw_btn" onclick="player.seekTo(player.getCurrentTime()-10)"
+                    title="-10 Seconds">fast_rewind</span>
+                <span class="material-icons sc_lnk" id="tp_pl_btn" title="Play"
+                    onclick="player.playVideo()">play_arrow</span>
+                <span class="material-icons sc_lnk" id="tb_pa_btn" title="Pause"
+                    onclick="player.pauseVideo()">pause</span>
+                <span class="material-icons sc_lnk" onclick="player.stopVideo()" id="tb_st_btn" title="Stop">stop</span>
+                <span class="material-icons sc_lnk" id="tb_fw_btn" onclick="player.seekTo(player.getCurrentTime()+10)"
+                    title="+10 Seconds">fast_forward</span>
+                <span id="mute" class="material-icons sc_lnk" id="tb_um_btn" onclick="volumetype()"
+                    title="Mute/Unmute">volume_up</span>
+                <span id="mute" class="material-icons sc_lnk" id="tb_um_btn" title="Mute/Unmute"
+                    onclick="fullscreen()">fit_screen</span>
+                <span class="btncmd sc_lnk" id="tb_wy_btn" onclick="window.open(player.getVideoUrl())"
+                    title="Watch On Youtube"><img style="filter: invert(1)"
+                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAVdJREFUSEvt1rsuRFEUgOFvNBq3BonErZFo6Kj1EhoheAilQkcnwlOgxFt4Ai0icWsENbIm58Q4ZpjbmYnESVZ39vr3Xnvtvf+CNn2FNnH9g9PKd2AMk0mMImIEPehDV/LzK57wjGtcJXGBiEu8Zbc0W+pIvo1FdDdp/19whq1kEsW0peBxnKO/ScBsmkfMpPBS8DGWc4KmaY+wml3xPQZyBj9gMAt+zxmapi9WubTU1YJPkuard551g2PgHPYxXQe9IXDw4qyvY7fG3mgYnC42LpNNbKCzigo0DZyyJrCDpV/guYD3MN8qcMtL3ZbmiuN0gKkqmqnsw/SnLpA6FvllyLeuvksv8EYz/zD+FkPZuzqerJUcoZH6EGutFoF4EmfLiUBMJDwr1GehyepzmqhP+Fjxq6S3WdkLyQsfG0ZvBdkL4btJRC+krybZy3mLP9P/C33LSv0B2YpAH2FlNUoAAAAASUVORK5CYII="></span>
+                    <input class = "ip-form" type="range" min="0" max="100" value="50" id="tb_vl_br" style="background-color: grey;width:100px;margin:0px;padding: 0px;"
+                        onchange="volumechange()" oninput="volumechange()">
+                </div>
+                <div style="display:flex;flex-direction:row;align-items: center;justify-content: space-around;width:50vw;">
+                    <span class="ip-form-title">YT/PT-ID:<input class = "ip-form" type="text" value="4nOn9YLp7AE" placeholder="Youtube ID" id = "yt_vid_id" style = "width:140px;padding:3px;"><span id="yt_id_btn" style="background-color: transparent;border:none;color:white;padding:0px;margin:0px;" onclick="ldVid()"><span class="material-icons sc_lnk">search</span></span></span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- <div id="cursor_mouse"></div> -->
+    <script src="player.js"></script>
+</body>
+<!--  -->
+
+</html>
