@@ -5,7 +5,7 @@ document.getElementById("nav_mob").addEventListener("onclick",function(){
 const typedTextSpan = document.querySelector(".typed-text");
 const cursorSpan = document.querySelector(".cursor");
 
-const textArray = ["Youtuber", "Web Designer", "Programer", "Developer"];
+const textArray = ["Youtuber", "Web Designer", "Programmer", "Developer"];
 const typingDelay = 200;
 const erasingDelay = 100;
 const newTextDelay = 2000; // Delay between current and next text
