@@ -5,7 +5,6 @@ html {
 body {
     margin: 0px;
     font-family: Nunito;
-    min-width: 400px;
     background-color: #122235;
     background-image:
         radial-gradient(at 47% 33%, hsl(0.00, 0%, 0%) 0, transparent 59%),
