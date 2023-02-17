@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Unique Block Image</title>
+  <link rel="stylesheet" href="/v4/v4_style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@500&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="/assets/MTT_1.png">
+  <style>
+    canvas {
+      border: 1px solid black;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="container" class="card">
+    <div id="navbar">
+      <img src="/assets/MTT_1.png" alt="MTT Logo" id="mtt_head">
+      <div id="navtoolbar">Random Image Generator</div>
+    </div>
+    <div id="ct_content">
+      <center>
+        <div class="ct_it">
+          <p class="ip-form-title">Block Size:</p>
+          <input class="ip-form" type="number" id="ip-block" value=32 required="">
+        </div>
+        <div class="ct_it">
+          <p class="ip-form-title">Seed:</p>
+          <input class="ip-form" type="number" id="ip-seed" value=32 required="">
+        </div>
+        <div class="ct_it">
+          <p class="ip-form-title">Dimensions:</p>
+          <input class="ip-form" type="number" id="ip-dimensions" value=512 required="">
+        </div>
+        <div class="ct_it">
+          <p class="ip-form-title">Image URL:</p>
+          <input class="ip-form" type="text" id="ip-url" required="">
+        </div>
+        <div>
+          <button class="ip-form-title sk_card_action" style="color:rgb(235, 219, 5);border:none;cursor: pointer;" name="Generate" onclick="modifyImg()">Generate</button>
+          <button class="ip-form-title sk_card_action" style="color:rgb(235, 219, 5);border:none;cursor: pointer;" name="Randomize" onclick="randomizeImg()">Randomize</button>
+        </div>
+        <p style="color:white;font-size: 14px;">This Mini App is Released Under MIT License</p>
+        <a style="color:rgb(179, 219, 33);text-decoration: none;" class="sk_card_action"
+          href="https://github.com/mrtechtroid/mrtechtroid.github.io/tree/main/minis/seedPix/" target="_blank">Source
+          Code</a>
+      </center>
+    </div>
+    <div>
+      <center><canvas id="block-canvas"></canvas></center>
+    </div>
+  </div>
+  <script>
+    function dEV(id) { return document.getElementById(id).value }
+    function randomizeImg(){
+      document.getElementById("ip-seed").value = Math.floor(Math.random() * 20000000000000000)
+      document.getElementById("ip-block").value = Math.floor(2**(Math.floor(Math.random() * 3))* 8)
+      document.getElementById("ip-dimensions").value = Math.floor(document.getElementById("ip-block").value * 2**(2+Math.floor(Math.random() * 8)))
+      if (document.getElementById("ip-dimensions").value > 1024){document.getElementById("ip-dimensions").value = 1024}
+      modifyImg()
+    }
+    function modifyImg() {
+      seed = Number(dEV("ip-seed"))
+      block = Number(dEV("ip-block"))
+      dim = Number(dEV("ip-dimensions"))
+      createImage("block-canvas", block, dim, seed)
+      document.getElementById("ip-url").value = document.getElementById("block-canvas").toDataURL();
+      console.log("seed:", seed.toLocaleString('fullwide', { useGrouping: false }))
+    }
+    document.getElementById("ip-seed").value = Math.floor(Math.random() * 20000000000000000)
+    modifyImg()
+    function createImage(canvasID, blockSize, dim, seed) {
+      // Get the canvas element
+      const canvas = document.getElementById(canvasID);
+      canvas.width = dim; canvas.height = dim;
+      canvas.style.width = dim; canvas.style.height = dim;
+      const ctx = canvas.getContext('2d');
+      if (dim % blockSize != 0 || blockSize > dim) {
+        alert("error - Dimension should be larger and a multiple of blockSize")
+        throw new Error("Dimension should be larger and a multiple of blockSize")
+      }
+      // Generate the block image
+      const imageData = ctx.createImageData(canvas.width, canvas.height);
+      for (let y = 0; y < canvas.height; y += blockSize) {
+        for (let x = 0; x < canvas.width; x += blockSize) {
+          // Generate a random value based on the seed and the block position
+          var randValue;
+          if (seed == 0) { seed = Math.floor(Math.random() * 20000000000000000) }
+          if (x == 0 || y == 0) {
+            randValue = Math.abs((Math.sin((x + 1) * (y + 1) * seed) * 10000) % 1);
+          } else {
+            randValue = Math.abs((Math.sin(x * y * seed) * 10000) % 1);
+          }
+
+          // Set the pixel colors for the block
+          for (let j = y; j < y + blockSize; j++) {
+            for (let i = x; i < x + blockSize; i++) {
+              const index = (j * canvas.width + i) * 4;
+              imageData.data[index] = randValue * 255; // Red component
+              imageData.data[index + 1] = randValue * 255; // Green component
+              imageData.data[index + 2] = randValue * 255; // Blue component
+              imageData.data[index + 3] = 255; // Alpha component (fully opaque)
+            }
+          }
+        }
+      }
+      // Draw the image data onto the canvas
+      ctx.putImageData(imageData, 0, 0);
+    }
+  </script>
+</body>
+
+</html>
