@@ -15,7 +15,10 @@ body {
     background-repeat: no-repeat;
     /* cursor: none; */
 }
-
+#x3dprev{
+    width:200px !important; 
+    height: 300px !important;
+}
 /* #cursor_mouse{
     position:fixed;
     width:20px;
