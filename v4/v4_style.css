@@ -417,7 +417,9 @@ body {}
     justify-content: space-evenly;
     margin: 10px;
 }
-
+.skill_card svg:hover{
+    filter:grayscale(1)
+}
 .sk_card_head {
     font-size: 25px;
     color: rgb(255, 0, 242);
