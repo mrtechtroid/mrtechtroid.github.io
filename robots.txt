@@ -1,0 +1,10 @@
+User-agent: *
+Disallow: /assets/*
+Disallow: /v1/*
+Disallow: /v2/*
+Disallow: /v3/*
+Allow: /v4/*
+Allow: /minis/*
+Allow: /partners/*
+
+Sitemap: sitemap.xml
