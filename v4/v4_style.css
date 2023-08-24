@@ -78,6 +78,9 @@ a:focus {
     width: 100px;
     height: 100px;
 }
+#quarkz_head {
+    width:150px
+}
 
 #navbar_mobile {
     display: none;
@@ -124,7 +127,25 @@ a:focus {
     font-weight: bolder;
     text-align: center;
 }
-
+.quarkz_cont::after {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    height:70vh;
+    width:100%;
+    background-size: cover !important;
+    background: url('/assets/quarkz_background.jpg');
+    filter: grayscale(100%);
+    z-index: 0;
+}
+.quarkz_cont{
+    height:70vh;
+    background-size: cover;
+    width:100%;
+    z-index: 1;
+    display:flex;
+    flex-direction:column;
+}
 .txt_container {
     height: 50px;
     display: flex;
@@ -400,13 +421,12 @@ body {}
     margin: 4px;
 }
 
-.skill_card {
+.skill_card,.prep_card {
     backdrop-filter: blur(20px) saturate(180%);
     -webkit-backdrop-filter: blur(17px) saturate(180%);
     background-color: rgba(17, 25, 40, 0.75);
     border-radius: 12px;
     border: 1px solid rgba(255, 255, 255, 0.125);
-    height: 20vh;
     margin: 5px;
     display: flex;
     flex-direction: column;
@@ -416,6 +436,20 @@ body {}
     height: 35vh;
     justify-content: space-evenly;
     margin: 10px;
+    color: grey;
+    text-align: center;
+}
+.prep_card{
+    height: max-content;
+    padding:10px;
+    min-height: 25vh;
+}
+.skill_card{
+    height: 35vh;
+}
+.prep_card h2{
+    color: rgb(212,212,0);
+    margin:5px;
 }
 .skill_card svg:hover{
     filter:grayscale(1)
