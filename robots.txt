@@ -7,4 +7,4 @@ Allow: /v4/*
 Allow: /minis/*
 Allow: /partners/*
 
-Sitemap: sitemap.xml
+Sitemap: https://mtt.one/sitemap.xml

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PasteIt by MTTOne</title>
+    <link rel="stylesheet" href="/v4/v4_style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@500&display=swap" rel="stylesheet">
+    <link rel="apple-touch-icon" href="/assets/MTT_1.png"/>
+    
+    <meta name="title" content="PasteIt by MTTOne ">
+    <meta name="description"
+        content="Save Code Snippets for future use.">
+    <meta name="robots" content="no-index, no-follow">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="language" content="English">
+    <meta name="revisit-after" content="31 days">
+    <meta name="author" content="Mr Techtroid">
+    <link rel="icon" type="image/x-icon" href="/assets/MTT_1.png">
+    <!-- <meta http-equiv="refresh" content="0;url=/v4/" /> -->
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KPN8JSN6DJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-KPN8JSN6DJ');
+    </script>
+    <style>
+        #container {
+            min-height: 80vh;
+        }
+
+        .skill_card:hover {
+            filter: grayscale(1);
+        }
+        select,input,button {
+            border: grey solid 2px;
+            border-radius: 5px;
+            padding: 5px;
+            margin: 10px;
+            background-color: var(--clr8);
+            font-size: max(14px,3vh);
+            color:yellowgreen;
+        }
+        button:hover{
+            background-color: yellowgreen;
+            color:black;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container" class="card" style="color:wheat">
+        <div id="navbar">
+            <img src="/assets/MTT_1.png" alt="MTT Logo" id="mtt_head">
+            <div id="navtoolbar">PasteIt</div>
+        </div>
+        <div style="display: flex;flex-direction: row;flex-wrap: wrap;">
+            <select id = "ed_lang" style="width:300px" onchange = "setUpLanguage()" onfocus="setUpLanguage()">
+                <option value = "plain_text">Plain Text</option>
+                <option value = "python">Python</option>
+                <option value = "javascript">Javascript</option>
+                <option value = "c_cpp">C/C++</option>
+                <option value = "java">Java</option>
+            </select>
+            <button id = "new_paste">Create New Paste</button>
+            <input id = "ed_url" style = "width:400px" disabled placeholder="https://mtt.one/p#/firstnote">
+        </div>
+
+        <div id = "editor" style="width:70vw;height:60vh;">
+
+        </div>
+        <center>
+            <span>&copy; 2023 Paste It by MTTOne</span><br>
+            <span>PasteIt is released under MIT License</span>
+        </center>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/ace-builds@1.24.1/src-min-noconflict/ace.min.js" type="text/javascript" charset="utf-8"></script>
+    <script>
+        function setupEditor(){
+            var editor = ace.edit("editor");
+            editor.setTheme("ace/theme/monokai");
+            editor.session.setMode("ace/mode/python");
+            return editor
+        }
+        let editor = setupEditor()
+        function setUpLanguage(){
+            editor.session.setMode("ace/mode/"+document.getElementById("ed_lang").value)
+        }
+    </script>
+    
+    <!-- Please Note: This Page is a placeholder to redirect to the latest version of the site -->
+</body>
+
+</html>

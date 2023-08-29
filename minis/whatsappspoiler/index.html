@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PasteIt by MTTOne</title>
+    <link rel="stylesheet" href="/v4/v4_style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@500&display=swap" rel="stylesheet">
+    <link rel="apple-touch-icon" href="/assets/MTT_1.png" />
+
+    <meta name="title" content="Whatsapp Spoilers by MTTOne ">
+    <meta name="description" content="Hide content behind a &quot;Read more&quot; button in Whatsapp">
+    <meta name="robots" content="index, follow">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="language" content="English">
+    <meta name="revisit-after" content="31 days">
+    <meta name="author" content="Mr Techtroid">
+    <link rel="icon" type="image/x-icon" href="/assets/MTT_1.png">
+    <!-- <meta http-equiv="refresh" content="0;url=/v4/" /> -->
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KPN8JSN6DJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-KPN8JSN6DJ');
+    </script>
+    <style>
+        #container {
+            min-height: 80vh;
+            min-width: 300px;
+        }
+
+        .skill_card:hover {
+            filter: grayscale(1);
+        }
+
+        select,
+        input,
+        button,
+        textarea {
+            border: grey solid 2px;
+            border-radius: 5px;
+            padding: 5px;
+            margin: 10px;
+            background-color: var(--clr8);
+            font-size: max(14px, 3vh);
+            color: yellowgreen;
+        }
+
+        button {
+            background-color: yellowgreen;
+            color: black;
+        }
+
+        button:hover {
+            filter: grayscale(0.8);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container" class="card" style="color:wheat">
+        <div id="navbar">
+            <img src="/assets/MTT_1.png" alt="MTT Logo" id="mtt_head">
+            <div>
+                <h1>Whatsapp&trade; Spoilers</h1>
+            </div>
+        </div>
+
+        <div style="display: flex;flex-direction: column;flex-wrap: wrap;align-items: center;justify-content: center;;">
+            <span>Want to create messages with the spoilers tag? Or you want to hide content behind Read More? This is
+                your place to go. </span>
+            <img src="/minis/whatsappspoiler/demo.jpg" style="width:50vw;" alt="demo image">
+            <div id="editor"
+                style="display: flex;flex-direction: column;flex-wrap: wrap;align-items: left;padding:10px;margin:10px;width:50vw;">
+                <span><label for = "wh_warning">Warning:</label></span>
+                <input id="wh_warning" name = "wh_warning" style="width:100%;" placeholder="" value="[SPOILER]">
+                <span><label for = "wh_seperator">Seperator:</label></span>
+                <select id="wh_seperator" name = "wh_seperator" style="width:100%;">
+                    <option value=" ">Single Space(content shown when quoted)</option>
+                    <option value="\n\n\n">3 Lines(content not shown when quoted)</option>
+                </select>
+                <span><label for = "wh_os">OS:</label></span>
+                <select id="wh_os" name = "wh_os" style="width:100%;">
+                    <option value="1">Only Android(zero-width spaces)</option>
+                    <option value="2">Both Android and iOS(normal spaces)</option>
+                </select>
+                <span><label for = "wh_content">Content</label></span>
+                <textarea id="wh_content" style="width:100%;"></textarea>
+                <button id="wh_generate" onclick="createOutput()">Generate</button>
+                <span><label for = "wh_output">Message(copy this)</label></span>
+                <textarea id="wh_output" disabled style="width:100%;"></textarea>
+                <button id="wh_copy" onclick="copyOutput()">Copy to Clipboard</button>
+            </div>
+        </div>
+        <center>
+            <span>&copy; 2023 Whatsapp&trade; Spoilers by MTTOne</span><br>
+            <span>Inspired from <a href="https://yi-jiayu.github.io/whatsapp-spoilers/">yi-jiayu</a></span>
+        </center>
+    </div>
+    </div>
+
+    <script>
+        function createOutput() {
+            var warning = document.getElementById('wh_warning').value;
+            var separator = document.getElementById('wh_seperator').value;
+            var content = document.getElementById('wh_content').value;
+            var padding = document.getElementById('wh_os').value == "2" ? ' '.repeat(2575) : '\u200B'.repeat(4000);
+            document.getElementById('wh_output').value = warning + separator.replaceAll("\\n","\n") + padding + content;
+        }
+
+        function copyOutput() {
+            navigator.clipboard.writeText( document.getElementById('wh_output').value)
+        }
+    </script>
+</body>
+
+</html>
