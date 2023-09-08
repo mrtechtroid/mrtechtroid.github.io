@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discord Webhook Sender by MTTOne</title>
+    <link rel="stylesheet" href="/v4/v4_style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@500&display=swap" rel="stylesheet">
+    <link rel="apple-touch-icon" href="/assets/MTT_1.png" />
+
+    <meta name="title" content="Discord Webhook Sender by MTTOne ">
+    <meta name="description" content="Send messages via Discord webhooks. ">
+    <meta name="robots" content="index, follow">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="language" content="English">
+    <meta name="revisit-after" content="31 days">
+    <meta name="author" content="Mr Techtroid">
+    <link rel="icon" type="image/x-icon" href="/assets/MTT_1.png">
+    <!-- <meta http-equiv="refresh" content="0;url=/v4/" /> -->
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KPN8JSN6DJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-KPN8JSN6DJ');
+    </script>
+    <style>
+        #container {
+            min-height: 80vh;
+            min-width: 300px;
+        }
+
+        .skill_card:hover {
+            filter: grayscale(1);
+        }
+
+        select,
+        input,
+        button,
+        textarea {
+            border: grey solid 2px;
+            border-radius: 5px;
+            padding: 5px;
+            margin: 10px;
+            background-color: var(--clr8);
+            font-size: max(14px, 3vh);
+            color: yellowgreen;
+        }
+
+        button {
+            background-color: yellowgreen;
+            color: black;
+        }
+
+        button:hover {
+            filter: grayscale(0.8);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container" class="card" style="color:wheat">
+        <div id="navbar">
+            <img src="/assets/MTT_1.png" alt="MTT Logo" id="mtt_head">
+            <div>
+                <h1>Discord Webhook Sender</h1>
+            </div>
+        </div>
+
+        <div style="display: flex;flex-direction: column;flex-wrap: wrap;align-items: center;justify-content: center;;">
+            <span>Send messages via Discord webhooks.</span>
+            <div id="editor"
+                style="display: flex;flex-direction: column;flex-wrap: wrap;align-items: left;padding:10px;margin:10px;width:50vw;">
+                <span><label for="wh_username">Username:</label></span>
+                <input type="text" id="wh_username" name="wh_username" style="width:100%;" placeholder="" value="">
+                <span><label for="wh_avatar_url">Avatar URL:</label></span>
+                <input type="url" id="wh_avatar_url" name="wh_avatar_url" style="width:100%;" placeholder="" value="">
+                <span><label for="wh_message">Message:</label></span>
+                <textarea id="wh_message" style="width:100%;"></textarea>
+                <span><label for="wh_webhook_url">Webhook URL:</label></span>
+                <input type="url" id="wh_webhook_url" name="wh_webhook_url" style="width:100%;" placeholder="" value="">
+                <span><label for="wh_embed">embed:</label></span>
+                <select id="wh_embed" name="wh_embed" style="width:100%;" onclick="embed()" onchange="embed()">
+                    <option value="1">No Embed</option>
+                    <option value="2">Add Embed</option>
+                </select>
+
+                <div id="d_embed" style="display: none;flex-direction: column;width:100%;">
+                    <h2>Embed</h2>
+                    <span><label for="wh_embed_title">Title:</label></span>
+                    <input type="text" id="wh_embed_title" name="wh_embed_title" style="width:100%;" placeholder=""
+                        value="">
+                    <span><label for="wh_embed_title_url">Title URL:</label></span>
+                    <input type="text" id="wh_embed_title_url" name="wh_embed_title_url" style="width:100%;"
+                        placeholder="" value="">
+                    <span><label for="wh_description">Description:</label></span>
+                    <textarea id="wh_description" style="width:100%;"></textarea>
+                    <span><label for="wh_color">Color:</label></span>
+                    <input type="color" id="wh_color" name="wh_color" style="width:100%;" placeholder="" value="">
+                    <span><label for="wh_author">Author:</label></span>
+                    <input type="text" id="wh_author" name="wh_author" style="width:100%;" placeholder="" value="">
+                    <span><label for="wh_author_url">Author URL:</label></span>
+                    <input type="text" id="wh_author_url" name="wh_author_url" style="width:100%;" placeholder=""
+                        value="">
+                    <span><label for="wh_footer">Footer:</label></span>
+                    <input type="text" id="wh_footer" name="wh_footer" style="width:100%;" placeholder="" value="">
+                    <span><label for="wh_footer_url">Footer URL:</label></span>
+                    <input type="text" id="wh_footer_url" name="wh_footer_url" style="width:100%;" placeholder=""
+                        value="">
+                    <span><label for="wh_image_url">Image URL:</label></span>
+                    <input type="text" id="wh_image_url" name="wh_image_url" style="width:100%;" placeholder=""
+                        value="">
+                    <span><label for="wh_thumbnail_url">Thumbnail URL:</label></span>
+                    <input type="text" id="wh_thumbnail_url" name="wh_thumbnail_url" style="width:100%;" placeholder=""
+                        value="">
+                </div>
+                <button id="wh_send" onclick="sendRequest()">Send</button>
+            </div>
+            <h3 id="wh_response_summary"></h3>
+            <code id="wh_response"
+                style="width:50vw;min-height:300px;border:2px solid white;border-radius:5px;background-color: black;">Response</code>
+        </div>
+        <center>
+            <span>&copy; 2023 Discord Webhook Sender by MTTOne</span><br>
+            <span>Inspired from <a href="https://webhook-sender.vercel.app/">webhook sender</a></span>
+        </center>
+    </div>
+    </div>
+
+    <script>
+        function dE(ele) {
+            return document.getElementById(ele)
+        }
+        function embed() {
+            if (dE("wh_embed").value == "1") {
+                dE("d_embed").style.display = "none"
+            } else {
+                dE("d_embed").style.display = "flex"
+            }
+        }
+        function sendRequest() {
+            if (dE("wh_message").value == "" || dE("wh_webhook_url").value == "") {
+                alert("Webhook URL and Message cannot be left empty.")
+                return false
+            }
+            if (dE("wh_description").value == "" && dE("wh_embed").value == "2") {
+                alert("Webhook Embed Description cannot be left empty.")
+                return false
+            }
+            let params = {
+                username: dE("wh_username").value,
+                avatar_url: dE("wh_avatar_url").value,
+                content: dE("wh_message").value,
+                embeds: []
+            }
+            if (dE("wh_embed").value == "2") {
+                params.embeds = [{
+                    title: dE("wh_embed_title").value,
+                    description: dE("wh_description").value,
+                    url: dE("wh_embed_title_url").value,
+                    color: parseInt(dE("wh_color").value.substring(1), 16),
+                    'author': {
+                        'name': dE("wh_author").value,
+                        'url': dE("wh_author_url").value,
+                    },
+                    'footer': {
+                        'text': dE("wh_footer").value,
+                        'icon_url': dE("wh_footer_url").value,
+                    },
+                    'image': {
+                        'url': dE("wh_image_url").value
+                    },
+                    'thumbnail': {
+                        'url': dE("wh_thumbnail_url").value
+                    }
+                }]
+            }
+            console.log(params)
+            dE("wh_response").innerText = "Awaiting Response"
+            fetch(dE("wh_webhook_url").value + '?wait=1', {
+                method: 'POST',
+                body: JSON.stringify(params),
+                headers: {
+                    'content-type': 'application/json'
+                }
+            })
+                .then(async (response) => {
+                    const obj = await response.json()
+                    if (response.status === 200) {
+                        const str = JSON.stringify(obj, null, 4)
+                        dE("wh_response_summary").innerText = "Success"
+                        dE("wh_response").innerText = JSON.stringify(obj,null, 4)
+                    } else {
+                        dE("wh_response_summary").innerText = "Error"
+                        dE("wh_response").innerText = JSON.stringify(obj,null, 4)
+                        
+                    }
+                })
+        }
+    </script>
+</body>
+
+</html>
