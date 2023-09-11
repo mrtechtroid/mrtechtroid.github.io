@@ -2,16 +2,26 @@
 <html>
 
 <head>
-  <title>Unique Block Image</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Random Image Generator by MTTOne</title>
   <link rel="stylesheet" href="/v4/v4_style.css">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@500&display=swap" rel="stylesheet">
+  <link rel="apple-touch-icon" href="/assets/MTT_1.png" />
+
+  <meta name="title" content="Random Image Generator by MTTOne ">
+  <meta name="description" content="Generate Random Images using a Seed and a Block Size in your Browser. ">
+  <meta name="robots" content="index, follow">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="language" content="English">
+  <meta name="revisit-after" content="31 days">
+  <meta name="author" content="Mr Techtroid">
   <link rel="icon" type="image/x-icon" href="/assets/MTT_1.png">
-  <style>
-    canvas {
-      border: 1px solid black;
-    }
-  </style>
+  <!-- <meta http-equiv="refresh" content="0;url=/v4/" /> -->
+
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-KPN8JSN6DJ"></script>
   <script>
@@ -21,16 +31,52 @@
 
       gtag('config', 'G-KPN8JSN6DJ');
   </script>
+  <style>
+      #container {
+          min-height: 80vh;
+          min-width: 300px;
+      }
+
+      .skill_card:hover {
+          filter: grayscale(1);
+      }
+
+      select,
+      input,
+      button,
+      textarea {
+          border: grey solid 2px;
+          border-radius: 5px;
+          padding: 5px;
+          margin: 10px;
+          background-color: var(--clr8);
+          font-size: max(14px, 3vh);
+          color: yellowgreen;
+      }
+
+      button {
+          background-color: yellowgreen;
+          color: black;
+      }
+
+      button:hover {
+          filter: grayscale(0.8);
+      }
+  </style>
 </head>
 
 <body>
   <div id="container" class="card">
     <div id="navbar">
       <img src="/assets/MTT_1.png" alt="MTT Logo" id="mtt_head">
-      <div id="navtoolbar">Random Image Generator</div>
+      <div style="color: white;">
+        <h1>Random Image Generator</h1>
+        
+    </div>
     </div>
     <div id="ct_content">
       <center>
+        <span style = "color: white;">Generate Random Images using a Seed and a Block Size in your Browser. </span>
         <div class="ct_it">
           <p class="ip-form-title">Block Size:</p>
           <input class="ip-form" type="number" id="ip-block" value=32 required="">
