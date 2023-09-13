@@ -6,5 +6,5 @@ Disallow: /v3/*
 Allow: /v4/*
 Allow: /minis/*
 Allow: /partners/*
-
+Allow: /assets/mtt-favicon.ico
 Sitemap: https://mtt.one/sitemap.xml
