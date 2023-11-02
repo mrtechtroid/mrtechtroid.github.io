@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate - MTT One</title>
+    <link rel="stylesheet" href="/v4/v4_style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@500&display=swap" rel="stylesheet">
+    <link rel="apple-touch-icon" href="/assets/mtt-favicon.ico" />
+
+    <meta name="title" content="Donate - MTT One">
+    <meta name="description" content="Donate - MTT One">
+    <meta name="robots" content="noindex, nofollow">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="language" content="English">
+    <meta name="revisit-after" content="31 days">
+    <meta name="author" content="Mr Techtroid">
+    <link rel="icon" type="image/x-icon" href="/assets/mtt_favicon.ico">
+    <!-- <meta http-equiv="refresh" content="0;url=/v4/" /> -->
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KPN8JSN6DJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-KPN8JSN6DJ');
+    </script>
+    <style>
+        #container {
+            min-height: 80vh;
+        }
+
+        .skill_card:hover {
+            filter: grayscale(1);
+        }
+    </style>
+
+    <script src=”https://cdnjs.cloudflare.com/ajax/libs/web3/1.7.3/web3.min.js"
+        integrity=”sha512-Ws+qbaGHSFw2Zc1e7XRpvW+kySrhmPLFYTyQ95mxAkss0sshj6ObdNP3HDWcwTs8zBJ60KpynKZywk0R8tG1GA==”
+        crossorigin=”anonymous” referrerpolicy=”no-referrer”></script>
+</head>
+
+<body>
+    <section id=”payment” class=”payment”>
+        <form class=”credit-card”>
+            <div class=”form-header”>
+                <h4 class=”title”>Payment</h4>
+            </div>
+            <div class=”form-body”>
+                <input class=”card-number” id=”Amount” type=”number” placeholder=”Amount”>
+                <button class=”pay-button” type=”submit”> <a href=”#”>Buy</a></button>
+                <div id=”status”></div>
+            </div>
+        </form>
+
+
+    </section>
+    <script>
+        window.addEventListener('load', async () => {
+            if (window.ethereum) {
+                window.web3 = new Web3(ethereum);
+                try {
+                    await ethereum.eth_requestAccounts;
+                    initPayButton()
+                } catch (err) {
+                    $('#status').html('User denied account access', err)
+                }
+            } else if (window.web3) {
+                window.web3 = new Web3(web3.currentProvider)
+                initPayButton()
+            } else {
+                $('#status').html('No Metamask (or other Web3 Provider) installed')
+            }
+        })
+
+        const initPayButton = () => {
+            $('.pay-button').click(() => {
+                const paymentAddress = 'Enter Your Address'
+                const amountEth = document.getElementById('Amount').value;
+                web3.eth.sendTransaction({
+                    to: paymentAddress,
+                    value: web3.toWei(amountEth, 'ether')
+                }, (err, transactionId) => {
+                    if (err) {
+                        console.log('Payment failed', err)
+                        $('#status').html('Payment failed')
+                    } else {
+                        document.getElementById('status').innerHTML = transactionId;
+                        $('#status').html('Payment successful')
+                    }
+                })
+            })
+        }
+    </script>
+
+</body>
+
+</html>
