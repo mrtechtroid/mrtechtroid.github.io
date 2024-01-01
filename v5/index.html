@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mr Techtroid</title>
+
+  <link rel="stylesheet" href="v5_style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@500&display=swap" rel="stylesheet">
+
+  <link rel="icon" type="image/x-icon" href="/assets/test_2.png">
+  <link rel="apple-touch-icon" href="/assets/test_2.png" />
+
+  <!-- Primary Meta Tags -->
+  <title>Mr Techtroid</title>
+  <meta name="title" content="Mr Techtroid">
+  <meta name="description"
+    content="My Portifolio Website where you can know more about me. I Love to Program And Code. I am also a Content Creator on Youtube making videos closely related to Tech and Coding. I love exploring new things, and learning new concepts.">
+  <meta name="keywords" content="open source, mr techtroid, mtt,mr tech,mrtechtroid,github,mttnotes,">
+  <meta name="robots" content="index, follow">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="language" content="English">
+  <meta name="revisit-after" content="31 days">
+  <meta name="author" content="Mr Techtroid">
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://mtt.one/">
+  <meta property="og:title" content="Mr Techtroid">
+  <meta property="og:description" content="My Portifolio Website where you can know more about me. ">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://mtt.one/">
+  <meta property="twitter:title" content="Mr Techtroid">
+  <meta property="twitter:description" content="My Portifolio Website where you can know more about me.  ">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-KPN8JSN6DJ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-KPN8JSN6DJ');
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/ScrollToPlugin.min.js"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Electrolize:wght@400;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/mouse-follower@1/dist/mouse-follower.min.css">
+  <script src="https://unpkg.com/mouse-follower@1/dist/mouse-follower.min.js"></script>
+
+  <link rel="preload" href="scene.splinecode" as="fetch">
+</head>
+
+<body>
+  <div id="nav" style="z-index:1">
+    <img src="/assets/mtt-new-logo.png" style="width:max(5vw,60px);" alt = "mtt logo" id="mtt_logo">
+    <div style="display: flex;flex-direction: row;margin-right: 10px;">
+      <a style="margin:5px;padding:5px;text-decoration: none;color:#122235" class="hover-underline-animation"
+        href="#aboutme">About</a>
+      <a style="margin:5px;padding:5px;text-decoration: none;color:#122235" class="hover-underline-animation"
+        href="#projects">Projects</a>
+      <a style="margin:5px;padding:5px;text-decoration: none;color:#122235" class="hover-underline-animation"
+        href="#contactme">Contact</a>
+    </div>
+  </div>
+
+  <div class="bar"></div>
+
+  <div class="canvas-cont">
+    <canvas id="canvas3d"></canvas>
+  </div>
+  <div id="loading" class="loaded"
+    style="display: flex;position:fixed;z-index:7;top:0;left:0;background-color: white;width:100vw;height:100vh;flex-direction: column;align-items: center;justify-content: center;">
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+      style="margin:auto;background:#fff;display:block;" width="200px" height="200px" viewBox="0 0 100 100"
+      preserveAspectRatio="xMidYMid">
+      <g transform="rotate(0 50 50)">
+        <rect x="47" y="24" rx="3" ry="6" width="6" height="12" fill="#36a793">
+          <animate attributeName="opacity" values="1;0" keyTimes="0;1" dur="1s" begin="-0.9166666666666666s"
+            repeatCount="indefinite"></animate>
+        </rect>
+      </g>
+      <g transform="rotate(30 50 50)">
+        <rect x="47" y="24" rx="3" ry="6" width="6" height="12" fill="#36a793">
+          <animate attributeName="opacity" values="1;0" keyTimes="0;1" dur="1s" begin="-0.8333333333333334s"
+            repeatCount="indefinite"></animate>
+        </rect>
+      </g>
+      <g transform="rotate(60 50 50)">
+        <rect x="47" y="24" rx="3" ry="6" width="6" height="12" fill="#36a793">
+          <animate attributeName="opacity" values="1;0" keyTimes="0;1" dur="1s" begin="-0.75s" repeatCount="indefinite">
+          </animate>
+        </rect>
+      </g>
+      <g transform="rotate(90 50 50)">
+        <rect x="47" y="24" rx="3" ry="6" width="6" height="12" fill="#36a793">
+          <animate attributeName="opacity" values="1;0" keyTimes="0;1" dur="1s" begin="-0.6666666666666666s"
+            repeatCount="indefinite"></animate>
+        </rect>
+      </g>
+      <g transform="rotate(120 50 50)">
+        <rect x="47" y="24" rx="3" ry="6" width="6" height="12" fill="#36a793">
+          <animate attributeName="opacity" values="1;0" keyTimes="0;1" dur="1s" begin="-0.5833333333333334s"
+            repeatCount="indefinite"></animate>
+        </rect>
+      </g>
+      <g transform="rotate(150 50 50)">
+        <rect x="47" y="24" rx="3" ry="6" width="6" height="12" fill="#36a793">
+          <animate attributeName="opacity" values="1;0" keyTimes="0;1" dur="1s" begin="-0.5s" repeatCount="indefinite">
+          </animate>
+        </rect>
+      </g>
+      <g transform="rotate(180 50 50)">
+        <rect x="47" y="24" rx="3" ry="6" width="6" height="12" fill="#36a793">
+          <animate attributeName="opacity" values="1;0" keyTimes="0;1" dur="1s" begin="-0.4166666666666667s"
+            repeatCount="indefinite"></animate>
+        </rect>
+      </g>
+      <g transform="rotate(210 50 50)">
+        <rect x="47" y="24" rx="3" ry="6" width="6" height="12" fill="#36a793">
+          <animate attributeName="opacity" values="1;0" keyTimes="0;1" dur="1s" begin="-0.3333333333333333s"
+            repeatCount="indefinite"></animate>
+        </rect>
+      </g>
+      <g transform="rotate(240 50 50)">
+        <rect x="47" y="24" rx="3" ry="6" width="6" height="12" fill="#36a793">
+          <animate attributeName="opacity" values="1;0" keyTimes="0;1" dur="1s" begin="-0.25s" repeatCount="indefinite">
+          </animate>
+        </rect>
+      </g>
+      <g transform="rotate(270 50 50)">
+        <rect x="47" y="24" rx="3" ry="6" width="6" height="12" fill="#36a793">
+          <animate attributeName="opacity" values="1;0" keyTimes="0;1" dur="1s" begin="-0.16666666666666666s"
+            repeatCount="indefinite"></animate>
+        </rect>
+      </g>
+      <g transform="rotate(300 50 50)">
+        <rect x="47" y="24" rx="3" ry="6" width="6" height="12" fill="#36a793">
+          <animate attributeName="opacity" values="1;0" keyTimes="0;1" dur="1s" begin="-0.08333333333333333s"
+            repeatCount="indefinite"></animate>
+        </rect>
+      </g>
+      <g transform="rotate(330 50 50)">
+        <rect x="47" y="24" rx="3" ry="6" width="6" height="12" fill="#36a793">
+          <animate attributeName="opacity" values="1;0" keyTimes="0;1" dur="1s" begin="0s" repeatCount="indefinite">
+          </animate>
+        </rect>
+      </g>
+    </svg>
+    <span style="font-size: 13px;width:400px;font-family: Electrolize;">Loading... <br>P.S Browser may hang due to
+      rendering of 3d resources.<br>If site doesn't load for 30 seconds <a href="/v4/">click here</a>.</span>
+  </div>
+  <div id="landing">
+    <div style="height:100vh;display: flex;flex-direction: column;justify-content: center;align-items: flex-start;">
+      <div id="landing_text" style="height:max-content;width:max-content;display: flex;flex-direction: column;">
+        <span style="font-weight: bolder;line-height: 1.3;">Hi, I am<br> Mr Techtroid</span>
+        <span style="font-size: max(3vh,15px);color:grey;">I build things for the web.</span>
+        <a class="or_btn" style="padding: 10px;" href = "#contactme">Let's Talk</a>
+      </div>
+    </div>
+  </div>
+  <div id="aboutme">
+    <div id="aboutme_text"
+      style="height:max-content;display: flex;flex-direction: column;align-items: flex-start;min-width: 350px;width:50vw;">
+      <span style="font-weight: bolder;line-height: 1.3;" class="trigger">Who Am I?</span>
+      <span style="font-size: max(3vh,15px);max-width: 360px;" class="trigger">
+        <span style="font-weight: bolder;font-size: larger;">A dedicated Full Stack Developer based in Bangalore, India
+          📍</span><br>
+        <span style="font-size: smaller;">I specialize in the creation and upkeep of responsive websites, ensuring a
+          seamless user experience. My proficiency lies in developing dynamic and captivating interfaces by meticulously
+          crafting clean, optimized code and leveraging state-of-the-art development tools and techniques. I possess a
+          strong passion for producing engaging content through the creation of professional YouTube videos.</span>
+      </span>
+      <span style="font-size: max(5vh,20px);font-weight: bolder;font-family: Electrolize;" class="trigger">Tech
+        Stack</span>
+      <div style="display: flex;flex-direction: column;padding:5px;max-width: 300px;" class="trigger">
+        <span style="font-size: max(3vh,15px);color:grey;font-family: Electrolize;font-weight: bolder;"><span
+            style="color:#122235">Languages:&nbsp;</span>C, C++, Python, Javascript, Lua</span>
+        <span style="font-size: max(3vh,15px);color:grey;font-family: Electrolize;font-weight: bolder;"><span
+            style="color:#122235">Front End:&nbsp;</span>HTML, CSS</span>
+        <span style="font-size: max(3vh,15px);color:grey;font-family: Electrolize;font-weight: bolder;"><span
+            style="color:#122235">Back End:&nbsp;</span>SQL, Firebase</span>
+        <span style="font-size: max(3vh,15px);color:grey;font-family: Electrolize;font-weight: bolder;"><span
+            style="color:#122235">Other Tools:&nbsp;</span>NodeJS, VS Code, Github, Figma, Spline</span>
+      </div>
+    </div>
+  </div>
+  <!-- <hr style="width:100%;" color="grey"> -->
+  <div id="projects" class="flex">
+    <span style="font-weight: bolder;line-height: 1.3;padding-left: 5vw;" class="trigger">Some Things<br> I've Worked
+      On</span>
+    <div style="display: flex;flex-direction: column;;width:100%;align-items:center;justify-content: center;">
+      <div id="projects_1" class="project-card">
+        <img class="project-preview-image" src="/assets/pro-1.png" alt="mtt projects quarkz webapp exam-preparation">
+        <div style="display: flex;flex-direction: column;width:25vw;margin:5px;min-width:300px;">
+          <span style="font-size:max(5vh,20px);font-weight: bolder;color:#122235;">Quarkz</span>
+          <span style="font-size:max(3vh,14px);color:grey">An Online Learning Platform For Competitive Exams</span>
+          <div style="display: flex;flex-direction: row;">
+            <!-- <a class="or_btn" style="background-color:grey;text-align: center;border-radius:10px">&lt;/&gt;</a> -->
+            <a class="or_btn" href="https://quarkz.mtt.one" target="_blank"
+              style="min-width: 15vw;text-align: center;border-radius:5px;margin-left:10px;">Live
+              View</a>
+          </div>
+        </div>
+      </div>
+      <div id="projects_3" class="project-card">
+        <img class="project-preview-image" src="/assets/pro-3.png" alt="mtt projects 2048 game">
+        <div style="display: flex;flex-direction: column;width:25vw;margin:5px;min-width:300px;">
+          <span style="font-size:max(5vh,20px);font-weight: bolder;color:#122235;">2048</span>
+          <span style="font-size:max(3vh,14px);color:grey">Classic game of 2048</span>
+          <div style="display: flex;flex-direction: row;">
+            <a class="or_btn" href="https://github.com/mrtechtroid/2048" target="_blank"
+              style="background-color:grey;text-align: center;border-radius:10px">&lt;/&gt;</a>
+            <a class="or_btn" href="https://mtt.one/2048" target="_blank"
+              style="min-width: 15vw;text-align: center;border-radius:5px;margin-left:10px;">Live
+              View</a>
+          </div>
+        </div>
+      </div>
+
+      <div id="projects_2" class="project-card">
+        <img class="project-preview-image" src="/assets/pro-2.png" alt="mtt projects healthlink e-consultation">
+        <div style="display: flex;flex-direction: column;width:25vw;margin:5px;min-width:300px;">
+          <span style="font-size:max(5vh,20px);font-weight: bolder;color:#122235;">HealthLink</span>
+          <span style="font-size:max(3vh,14px);color:grey">Connect with trusted doctors and specialists online for
+            expert advice from the comfort of your home.</span>
+          <div style="display: flex;flex-direction: row;">
+            <a class="or_btn" href="https://github.com/mrtechtroid/healthlink" target="_blank"
+              style="background-color:grey;text-align: center;border-radius:10px">&lt;/&gt;</a>
+            <a class="or_btn" href="https://healthlink.mtt.one" target="_blank"
+              style="min-width: 15vw;text-align: center;border-radius:5px;margin-left:10px;">Live
+              View</a>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+  <!-- <hr style="width:100%;" color="grey"> -->
+  <div id="contactme" class="flex row" style="justify-content: left;align-items: flex-start;">
+    <span style="font-weight: bolder;line-height: 1.3;" class="trigger">Contact Me</span>
+    <div id="contact-container"
+      style="translate: none; rotate: none; scale: none; opacity: 1; transform: translate(0px, 0px);font-size:14px;">
+      <div class="column contact-container"
+        style="background-color: white;border-radius: 10px;width:100%;height:100%;width:max(35vw,300px);display: flex;align-items: center;justify-content: center;flex-direction: column;padding:5px;">
+        <div id="contact-name-input" class="input-container column"
+          style="display:flex;flex-direction: column;border-radius: 20px;background-color: #F5F5F5;padding:5px;width:90%;margin:5px;">
+          <div class="row" style="padding:5px;line-height: 1.3;">
+            <label for="ip-name">Name :</label>
+          </div>
+          <input id="ip-name"
+            style="background-color: transparent;border:transparent;outline:none;font-size:18px;padding-top:0px;"
+            tabindex="-1">
+        </div>
+        <div id="contact-Email-input" class="input-container column"
+          style="display:flex;flex-direction: column;border-radius: 20px;background-color: #F5F5F5;padding:5px;width:90%;margin:5px;">
+          <div class="row" style="padding:5px;line-height: 1.3;">
+            <label for="ip-email">Email :</label>
+          </div>
+          <input id="ip-email"
+            style="background-color: transparent;border:transparent;outline:none;font-size:18px;padding-top:0px;"
+            tabindex="-1">
+        </div>
+        <input id="ip-subject" style="display: none;visibility: hidden;" value="v5update">
+        <input id="ip-ideas" style="display: none;visibility: hidden;" value="v5update">
+        <div id="contact-message-input" class="input-container column"
+          style="display:flex;flex-direction: column;border-radius: 20px;background-color: #F5F5F5;padding:5px;width:90%;margin:5px;">
+          <div class="row" style="padding:5px;line-height: 1.3;">
+            <label for="ip-message">Message :</label>
+          </div>
+          <textarea id="ip-message"
+            style="font-family:Poppins;background-color: transparent;border:transparent;outline:none;font-size:18px;padding-top:0px;overflow-y:scroll;overflow-x:hidden;height:30vh;resize: none;"
+            tabindex="-1"></textarea>
+        </div>
+        <div style="display: flex;flex-direction: row;justify-content: space-between;width:90%;"
+          id="contact-button-container">
+          <!--Social Icons-->
+          <div>
+            <a tabindex="-1" target="_blank" href="https://twitter.com/MrTechtroid"><img class="social-icon"
+                src="https://img.icons8.com/ios-glyphs/30/twitter.png" alt="twitter contact social icon small 28x28"
+                height="28" width="28"></a>
+            <a tabindex="-1" target="_blank" href="https://github.com/MrTechtroid"><img class="social-icon"
+                alt="github contact social icon small 28x28" height="28" width="28"
+                src="https://img.icons8.com/ios-glyphs/30/github.png"></a>
+            <a tabindex="-1" target="_blank" href="https://www.youtube.com/@mrtechtroid">
+              <img class="social-icon " alt="youtube contact social icon small 28x28" height="28" width="28"
+                src="https://img.icons8.com/ios-glyphs/30/youtube.png"></a>
+            <a tabindex="-1" href="mailto:hello@mtt.one"> <img class="social-icon"
+                alt="email contact social icon small 28x28" height="28" width="28"
+                src="https://img.icons8.com/material-outlined/24/mail.png"></a>
+          </div>
+
+          <!--Submit Button-->
+          <div id="contact-submit-button" class="or_btn" onclick="sendmail()">
+            Submit
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr style="width:100%;" color="grey">
+  <footer style="text-align: center;">
+    &copy; Copyright 2024 Mr Techtroid (v5.0.0)<br>
+    <span style="width:400px;font-family: Electrolize;">
+      <a style="margin:5px;text-decoration: none;color:#122235" class="hover-underline-animation" tabindex="-1" target="_blank" href="https://twitter.com/MrTechtroid">Twitter</a>
+      <a style="margin:5px;text-decoration: none;color:#122235" class="hover-underline-animation" tabindex="-1" target="_blank" href="https://github.com/MrTechtroid">Github</a>
+      <a style="margin:5px;text-decoration: none;color:#122235" class="hover-underline-animation" tabindex="-1" target="_blank" href="https://www.youtube.com/@mrtechtroid">Youtube</a>
+      <a style="margin:5px;text-decoration: none;color:#122235" class="hover-underline-animation" tabindex="-1" href="mailto:hello@mtt.one">Mail</a></span><br>
+      <span style="font-size: 10px;width:400px;font-family: Electrolize;">3D Models by Spline and Spline Community,
+        Mockups by Artboard, Inspiration by david-hckh.com</span>
+  </footer>
+  <script src="v5_js.js" type="module"></script>
+  <script src="v5_js-2.js"></script>
+  <script>
+    const lenis = new Lenis()
+
+    lenis.on('scroll', (e) => {
+      // console.log(e)
+    })
+
+    function raf(time) {
+      lenis.raf(time)
+      requestAnimationFrame(raf)
+    }
+
+    requestAnimationFrame(raf)
+  </script>
+  <script>
+    var cursor = new MouseFollower();
+  </script>
+</body>
+
+</html>
