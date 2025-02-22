@@ -1,0 +1,15 @@
+[submodule "mttnotes"]
+	path = mttnotes
+	url = https://github.com/mrtechtroid/mttnotes.git
+[submodule "edu"]
+	path = edu
+	url = https://github.com/mrtechtroid/edu.git
+[submodule "GameHub"]
+	path = GameHub
+	url = https://github.com/mrtechtroid/GameHub.git
+[submodule "2048"]
+	path = 2048
+	url = https://github.com/mrtechtroid/2048.git
+[submodule "r"]
+	path = r
+	url = https://github.com/mrtechtroid/r.git

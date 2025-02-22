@@ -1,0 +1,47 @@
+name: Auto Update Submodules
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 0 * * *'  # Runs daily at midnight UTC
+
+jobs:
+  update-submodules:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+        with:
+          submodules: true
+          token: ${{ secrets.GH_PAT }}
+
+      - name: Check and update submodules
+        run: |
+          git submodule foreach --quiet '
+            remote_url=$(git remote get-url origin)
+            branch=$(git rev-parse --abbrev-ref HEAD)
+            latest_remote_commit=$(git ls-remote $remote_url $branch | awk "{print \$1}")
+            current_commit=$(git rev-parse HEAD)
+
+            if [ "$latest_remote_commit" != "$current_commit" ]; then
+              echo "Updating submodule $name..."
+              git fetch origin $branch
+              git checkout $latest_remote_commit
+              cd ..
+              git add $name
+            else
+              echo "No updates for submodule $name."
+            fi
+          '
+
+      - name: Commit and push changes if any
+        run: |
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+            exit 0
+          fi
+          
+          git config --global user.email "github-actions@github.com"
+          git config --global user.name "GitHub Actions"
+          git commit -m "Auto-update submodules with new commits"
+          git push origin HEAD:main  # Change 'main' if your default branch is different
